@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		19121F3CB9880D4D28591E7F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		19121F3CB9880D4D28591E7F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		59932B550F47C8E369031481 /* Pods-BSUITest_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSUITest_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSUITest_Tests/Pods-BSUITest_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D60CF9986D85E38FDCD82B0 /* Pods-BSUITest_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSUITest_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-BSUITest_Example/Pods-BSUITest_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* BSUITest_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BSUITest_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,10 +60,10 @@
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6F9E49E971A895ACBB004B35 /* Pods-BSUITest_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSUITest_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BSUITest_Tests/Pods-BSUITest_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7139EAAD18F74CB323769486 /* BSUITest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BSUITest.podspec; path = ../BSUITest.podspec; sourceTree = "<group>"; };
+		7139EAAD18F74CB323769486 /* BSUITest.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BSUITest.podspec; path = ../BSUITest.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B197A0CDA8B0446768AB4E9 /* Pods-BSUITest_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSUITest_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSUITest_Example/Pods-BSUITest_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		860EA53848475C799EC8B5E0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		860EA53848475C799EC8B5E0 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		87C3EDBFEC6CF85AF628122F /* Pods_BSUITest_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BSUITest_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA498125F42F5CAE078F2560 /* Pods_BSUITest_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BSUITest_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +250,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = vviicc;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = SKY9AYAMG2;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -533,12 +536,15 @@
 			baseConfigurationReference = 7B197A0CDA8B0446768AB4E9 /* Pods-BSUITest_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SKY9AYAMG2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BSUITest/BSUITest-Prefix.pch";
 				INFOPLIST_FILE = "BSUITest/BSUITest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincent.BSUITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -548,12 +554,15 @@
 			baseConfigurationReference = 5D60CF9986D85E38FDCD82B0 /* Pods-BSUITest_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = SKY9AYAMG2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BSUITest/BSUITest-Prefix.pch";
 				INFOPLIST_FILE = "BSUITest/BSUITest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincent.BSUITest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

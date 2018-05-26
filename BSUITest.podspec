@@ -9,34 +9,25 @@
 Pod::Spec.new do |s|
   s.name             = 'BSUITest'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BSUITest.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.summary          = 'A useful UI Automatic Testing Tool that supports UI Recording/UI Playback/Screen Record/Video Screenshot Comparison'
+  
+  s.description      = 'It is a useful UI Automatic Testing Tool that supports UI Recording/UI Playback/Screen Record/Video Screenshot Comparison without writing any ui test script.一个不用写UI测试脚本便可实现录制/回放/录屏/录屏截图相识度对比的UI自动化测试工具。'
 
   s.homepage         = 'https://github.com/vviicc/BSUITest'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'vviicc' => '704550191@qq.com' }
   s.source           = { :git => 'https://github.com/vviicc/BSUITest.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.frameworks = 'IOKit'
+  s.vendored_frameworks = 'BSUITest/Classes/Vendor/PTFakeTouch.framework'
+  
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'BSUITest/Classes/**/*'
+  s.exclude_files = 'BSUITest/Classes/Vendor/TPPreciseTimer.{h,m}'
   
-  # s.resource_bundles = {
-  #   'BSUITest' => ['BSUITest/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.subspec 'mrc' do |sp|
+      sp.source_files = 'BSUITest/Classes/Vendor/TPPreciseTimer.{h,m}'
+      sp.requires_arc = false
+  end
+  
 end

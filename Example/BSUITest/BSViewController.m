@@ -9,6 +9,9 @@
 #import "BSViewController.h"
 
 @interface BSViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
+@property (weak, nonatomic) IBOutlet UITextField *textField2;
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 
 @end
 
@@ -18,6 +21,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (IBAction)add:(id)sender {
+    self.resultLabel.text = [@(self.textField1.text.intValue + self.textField2.text.intValue) stringValue];
+    
+    [self.view endEditing:NO];
+}
+
+- (IBAction)clear:(id)sender {
+    self.textField1.text = nil;
+    self.textField2.text = nil;
+    self.resultLabel.text = nil;
+    
+    [self.view endEditing:NO];
 }
 
 - (void)didReceiveMemoryWarning

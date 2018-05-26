@@ -1,0 +1,6 @@
+framework module BSUITest {
+  umbrella header "BSUITest-umbrella.h"
+
+  export *
+  module * { export * }
+}
