@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BSUITest_Example' do
+  pod 'BSUITest', :path => '../'
+
+  target 'BSUITest_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
