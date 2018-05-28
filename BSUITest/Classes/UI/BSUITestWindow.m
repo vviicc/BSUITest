@@ -32,6 +32,13 @@
     return pointInside;
 }
 
+#pragma mark - setter
+
+- (void)setViewCenter:(CGPoint)viewCenter
+{
+    self.rootController.viewCenter = viewCenter;
+}
+
 #pragma mark - getter
 
 - (BSUIRootController *)rootController

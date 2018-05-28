@@ -53,7 +53,7 @@ static CGFloat const kBSVideoSamplingTime = 0.2;    // 视频采样截图时间�
     [self initNotifys];
     
     self.diffImageArray = [NSMutableArray array];
-    self.serialQueue = dispatch_queue_create("com.bs.uitest.videoCmp", DISPATCH_QUEUE_SERIAL);
+    self.serialQueue = dispatch_queue_create("com.bs.uitest.videoCompare", DISPATCH_QUEUE_SERIAL);
     
     __weak __typeof(self)weakSelf = self;
     [self compareRecVideo:self.recURL replayVideo:self.replayURL complete:^{
@@ -97,6 +97,8 @@ static CGFloat const kBSVideoSamplingTime = 0.2;    // 视频采样截图时间�
 {
     static int totalPlayEndCount = 0;
     totalPlayEndCount += 1;
+    
+    // 两个视频都播放完毕
     if (totalPlayEndCount == 2) {
         self.playAgainBtn.hidden = NO;
         totalPlayEndCount = 0;
@@ -184,14 +186,14 @@ static CGFloat const kBSVideoSamplingTime = 0.2;    // 视频采样截图时间�
     CGFloat i = 0.0;
     
     while (i <= secs) {
-        
         __weak __typeof(self) weakSelf = self;
         dispatch_async(self.serialQueue, ^{
             __strong __typeof(self) strongSelf = weakSelf;
+            
             @autoreleasepool {
                 if (strongSelf) {
-                    UIImage *recImage = [self videoImage:recURL time:i];
-                    UIImage *replayImage = [self videoImage:replayURL time:i];
+                    UIImage *recImage = [strongSelf videoImage:recURL time:i];
+                    UIImage *replayImage = [strongSelf videoImage:replayURL time:i];
                     
                     NSString *pHashString1 = [recImage pHashStringValueWithSize:CGSizeMake(8, 8)];
                     NSString *pHashString2 = [replayImage pHashStringValueWithSize:CGSizeMake(8, 8)];
@@ -200,8 +202,8 @@ static CGFloat const kBSVideoSamplingTime = 0.2;    // 视频采样截图时间�
                     
                     if (diff > kBSImageDiffValue) {
                         BSDiffImageObject *diffImageObj = [BSDiffImageObject new];
-                        diffImageObj.recImage = [self compressImage:recImage];
-                        diffImageObj.replayImage = [self compressImage:replayImage];
+                        diffImageObj.recImage = [strongSelf compressImage:recImage];
+                        diffImageObj.replayImage = [strongSelf compressImage:replayImage];
                         diffImageObj.diffValue = diff;
                         diffImageObj.time = i;
                         

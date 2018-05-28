@@ -9,6 +9,8 @@
 
 @interface BSUIRootController : UIViewController
 
+@property (nonatomic, assign) CGPoint viewCenter;
+
 - (BOOL)shouldReceiveTouch:(CGPoint)point;
 
 @end

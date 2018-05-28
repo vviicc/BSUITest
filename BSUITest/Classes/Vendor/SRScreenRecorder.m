@@ -163,7 +163,6 @@ CVReturn CVPixelBufferCreateWithIOSurface(
              [self finishBackgroundTask];
              
              if (self.writer.status == AVAssetWriterStatusFailed) {
-                 NSLog(@"99999,record failed:%@", self.writer.error);
              }
              if (completeHandle) {
                  completeHandle();
@@ -273,6 +272,10 @@ CVReturn CVPixelBufferCreateWithIOSurface(
     
     NSArray *windows = [[UIApplication sharedApplication] windows];
     for (UIWindow *window in windows) {
+        if ([window isKindOfClass:NSClassFromString(@"BSUITestWindow")]) {
+            continue;
+        }
+        
         if (![window respondsToSelector:@selector(screen)] || window.screen == mainScreen) {
             CGContextSaveGState(context);
             

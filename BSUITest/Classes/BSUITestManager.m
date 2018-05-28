@@ -32,6 +32,8 @@
 {
     if (self = [super init]) {
         self.uiTestWindow.hidden = NO;
+        
+        [BSUITestLogic sharedInstance].recWindow = self.uiTestWindow;
         [[BSUITestLogic sharedInstance] hookSendEvent];
     }
     
@@ -42,16 +44,12 @@
 
 - (void)setEnable:(BOOL)enable
 {
-    _enable = enable;
-    
     self.uiTestWindow.hidden = !enable;
 }
 
-- (void)setWindowCenter:(CGPoint)windowCenter
+- (void)setViewCenter:(CGPoint)viewCenter
 {
-    _windowCenter = windowCenter;
-    
-    self.uiTestWindow.center = windowCenter;
+    self.uiTestWindow.viewCenter = viewCenter;
 }
 
 #pragma mark - getter

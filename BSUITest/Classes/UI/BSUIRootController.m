@@ -9,6 +9,11 @@
 #import "BSUITestLogic.h"
 #import "BSUIRecordListController.h"
 
+typedef NS_ENUM(NSInteger, BSRecordLabelTag) {
+    BSRecordLabelTag_StartRecord = 0,
+    BSRecordLabelTag_StopRecord
+};
+
 @interface BSUIRootController ()
 
 @property (nonatomic, strong) UILabel *recordLabel;
@@ -27,6 +32,10 @@
     [super viewDidLayoutSubviews];
     
     self.recordLabel.frame = CGRectMake((CGRectGetWidth(self.view.bounds) - 76) / 2.0, 2, 76, 34);
+    
+    if (!CGPointEqualToPoint(CGPointZero, self.viewCenter)) {
+        self.recordLabel.center = self.viewCenter;
+    }
 }
 
 - (void)initViews
@@ -45,19 +54,22 @@
 
 - (void)onTapRecord
 {
-    if (self.recordLabel.tag == 11) {
-        self.recordLabel.tag = 22;
+    if (self.recordLabel.tag == BSRecordLabelTag_StartRecord) {
+        self.recordLabel.tag = BSRecordLabelTag_StopRecord;
         self.recordLabel.text = @"结束录制\n录制中...";
+        
         [[BSUITestLogic sharedInstance] startRecord];
-    } else if (self.recordLabel.tag == 22) {
-        self.recordLabel.tag = 11;
+    } else if (self.recordLabel.tag == BSRecordLabelTag_StopRecord) {
+        self.recordLabel.tag = BSRecordLabelTag_StartRecord;
         self.recordLabel.text = @"轻点录制\n长按更多";
+        
         [[BSUITestLogic sharedInstance] stopRecord];
-        [self saveRecord];
+
+        [self showSaveRecordView];
     }
 }
 
-- (void)saveRecord
+- (void)showSaveRecordView
 {
     if ([BSUITestLogic sharedInstance].logTouchs.count == 0) {
         return;
@@ -69,7 +81,7 @@
         textField.text = @"测试用例";
     }];
     
-    __weak id weakSelf = self;
+    __weak __typeof(self)weakSelf = self;
     UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"保存" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         NSString *recName = alertController.textFields.firstObject.text;
         if (recName.length == 0) {
@@ -185,7 +197,7 @@
         _recordLabel.numberOfLines = 2;
         _recordLabel.layer.cornerRadius = 8;
         _recordLabel.layer.backgroundColor = [UIColor redColor].CGColor;
-        _recordLabel.tag = 11;
+        _recordLabel.tag = BSRecordLabelTag_StartRecord;
     }
     
     return _recordLabel;

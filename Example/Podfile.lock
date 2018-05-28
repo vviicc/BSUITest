@@ -1,5 +1,7 @@
 PODS:
-  - BSUITest (0.1.0)
+  - BSUITest (0.1.1):
+    - BSUITest/mrc (= 0.1.1)
+  - BSUITest/mrc (0.1.1)
 
 DEPENDENCIES:
   - BSUITest (from `../`)
@@ -9,7 +11,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  BSUITest: 2390c3fbddf4b6fd980403c791efee90d7e51879
+  BSUITest: 659782edde3f11f65f0dd884d19b28caf196a50e
 
 PODFILE CHECKSUM: dd541567f136b11ee5d8602b521dac77df6639f7
 

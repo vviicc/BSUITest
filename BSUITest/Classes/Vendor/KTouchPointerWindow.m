@@ -78,7 +78,7 @@ static char s_key;
 	
 	[[UIApplication sharedApplication].keyWindow bringSubviewToFront:self.k_touchPointerView];
     
-    if ([self isKindOfClass:NSClassFromString(@"MFRecWindow")]) {
+    if ([self isKindOfClass:NSClassFromString(@"BSUITestWindow")]) {
         [self k_sendEvent:event];
         return;
     }

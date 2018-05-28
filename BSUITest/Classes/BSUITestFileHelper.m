@@ -9,16 +9,9 @@
 
 @implementation BSUITestFileHelper
 
-+ (NSString *)logTouchDir
++ (void)createUITestDirIfNeeded
 {
-    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *touchDir = [cachePath stringByAppendingPathComponent:@"BSUITest"];
-    return touchDir;
-}
-
-+ (void)createTouchDirIfNeeded
-{
-    NSString *touchDir = [self logTouchDir];
+    NSString *touchDir = [self uiTestDir];
     
     BOOL isDirectory;
     BOOL isExists = [[NSFileManager defaultManager] fileExistsAtPath:touchDir isDirectory:&isDirectory] && isDirectory;
@@ -28,9 +21,16 @@
     }
 }
 
-+ (NSArray<NSString *> *)historyLogTouchPath
++ (NSString *)uiTestDir
 {
-    NSString *touchDir = [self logTouchDir];
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *dir = [cachePath stringByAppendingPathComponent:@"BSUITest"];
+    return dir;
+}
+
++ (NSArray<NSString *> *)historyRecordPath
+{
+    NSString *touchDir = [self uiTestDir];
     NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:touchDir];
     
     NSMutableArray<NSString *> *tempPaths = [NSMutableArray array];
@@ -50,9 +50,27 @@
     return [NSArray arrayWithArray:tempPaths];
 }
 
++ (void)parseFileName:(NSString *)fileName recordInfoBlock:(void (^)(NSString *name, NSString *date, NSString *duration))recordInfoBlock
+{
+    NSArray<NSString *> *array = [fileName componentsSeparatedByString:@"_"];
+    
+    static NSDateFormatter *formatter = nil;
+    if (!formatter) {
+        formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    }
+    
+    if (recordInfoBlock && array.count == 3) {
+        NSTimeInterval stamp = [array[1] doubleValue];
+        NSDate *date = [NSDate dateWithTimeIntervalSince1970:stamp];
+        NSString *dateString = [formatter stringFromDate:date];
+        recordInfoBlock(array[0], dateString, array[2]);
+    }
+}
+
 + (void)historyRecVideo:(NSString *)recTimestamp videosCallback:(void(^)(NSString *recVideoName, NSArray<NSString *> *replayVideos))videosCallback
 {
-    NSString *touchDir = [self logTouchDir];
+    NSString *touchDir = [self uiTestDir];
     NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtPath:touchDir];
     
     NSString *path = nil;
@@ -75,7 +93,7 @@
 
 + (void)removeRecord:(NSString *)recName
 {
-    NSString *touchDir = [self logTouchDir];
+    NSString *touchDir = [self uiTestDir];
     NSString *recPath = [touchDir stringByAppendingPathComponent:recName];
     [[NSFileManager defaultManager] removeItemAtPath:recPath error:nil];
     
@@ -91,27 +109,9 @@
 
 + (void)removeReplayVideo:(NSString *)videoFile
 {
-    NSString *touchDir = [self logTouchDir];
+    NSString *touchDir = [self uiTestDir];
     NSString *videoPath = [touchDir stringByAppendingPathComponent:videoFile];
     [[NSFileManager defaultManager] removeItemAtPath:videoPath error:nil];
-}
-
-+ (void)parseFileName:(NSString *)fileName recordInfoBlock:(void (^)(NSString *name, NSString *date, NSString *duration))recordInfoBlock
-{
-    NSArray<NSString *> *array = [fileName componentsSeparatedByString:@"_"];
-    
-    static NSDateFormatter *formatter = nil;
-    if (!formatter) {
-        formatter = [[NSDateFormatter alloc] init];
-        formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    }
-    
-    if (recordInfoBlock && array.count == 3) {
-        NSTimeInterval stamp = [array[1] doubleValue];
-        NSDate *date = [NSDate dateWithTimeIntervalSince1970:stamp];
-        NSString *dateString = [formatter stringFromDate:date];
-        recordInfoBlock(array[0], dateString, array[2]);
-    }
 }
 
 @end

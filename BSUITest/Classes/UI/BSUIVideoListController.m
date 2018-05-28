@@ -15,10 +15,10 @@ static NSString * const kBSVideoListCellIdentifier = @"kBSVideoListCellIdentifie
 
 @interface BSVideoListCell : UITableViewCell
 
-- (void)updateCell:(NSString *)videoDate cellIndex:(int32_t)cellIndex isRecVideo:(BOOL)isRecVideo;
-
 @property (nonatomic, copy) void(^didClickPlayVideo)(int32_t cellIndex, BOOL isRecVideo);
 @property (nonatomic, copy) void(^didClickCompare)(int32_t cellIndex);
+
+- (void)updateCell:(NSString *)videoDate cellIndex:(int32_t)cellIndex isRecVideo:(BOOL)isRecVideo;
 
 @end
 
@@ -26,6 +26,7 @@ static NSString * const kBSVideoListCellIdentifier = @"kBSVideoListCellIdentifie
 @property (nonatomic, strong) UILabel *dateLabel;
 @property (nonatomic, strong) UIButton *playVideoBtn;
 @property (nonatomic, strong) UIButton *compareBtn;
+
 @property (nonatomic, assign) int32_t cellIndex;
 @property (nonatomic, assign) BOOL isRecVideo;
 @end
@@ -124,6 +125,7 @@ static NSString * const kBSVideoListCellIdentifier = @"kBSVideoListCellIdentifie
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
+    
     self.closeBtn.frame = CGRectMake(0, 20, 50, 44);
     self.tableView.frame = CGRectMake(0, 64, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - 64);
     self.emptyLabel.frame = self.tableView.bounds;
@@ -139,8 +141,9 @@ static NSString * const kBSVideoListCellIdentifier = @"kBSVideoListCellIdentifie
     tableView.delegate = self;
     tableView.backgroundColor = [UIColor whiteColor];
     [tableView registerClass:[BSVideoListCell class] forCellReuseIdentifier:kBSVideoListCellIdentifier];
+    tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    tableView.rowHeight = 66;
     self.tableView = tableView;
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:tableView];
     
     
@@ -192,11 +195,6 @@ static NSString * const kBSVideoListCellIdentifier = @"kBSVideoListCellIdentifie
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 66;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BSVideoListCell *cell = [tableView dequeueReusableCellWithIdentifier:kBSVideoListCellIdentifier forIndexPath:indexPath];
@@ -227,6 +225,9 @@ static NSString * const kBSVideoListCellIdentifier = @"kBSVideoListCellIdentifie
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    int32_t cellIndex = (int32_t)indexPath.row;
+    BOOL isRecVideo = indexPath.section == 0;
+    [self playVideo:cellIndex isRecVideo:isRecVideo];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -277,7 +278,11 @@ static NSString * const kBSVideoListCellIdentifier = @"kBSVideoListCellIdentifie
         videoName = self.replayVideos[cellIndex];
     }
     
-    NSString *touchDir = [BSUITestFileHelper logTouchDir];
+    if (!videoName) {
+        return;
+    }
+    
+    NSString *touchDir = [BSUITestFileHelper uiTestDir];
     NSString *videoFilePath = [touchDir stringByAppendingPathComponent:videoName];
     NSURL *videoFileURL = [NSURL fileURLWithPath:videoFilePath isDirectory:NO];
     
@@ -294,7 +299,7 @@ static NSString * const kBSVideoListCellIdentifier = @"kBSVideoListCellIdentifie
     }
     
     BSUIVideoCompareController *videoCompare = [[BSUIVideoCompareController alloc] init];
-    NSString *touchDir = [BSUITestFileHelper logTouchDir];
+    NSString *touchDir = [BSUITestFileHelper uiTestDir];
     NSString *recFilePath = [touchDir stringByAppendingPathComponent:self.recVideo];
     NSString *replayFilePath = [touchDir stringByAppendingPathComponent:self.replayVideos[cellIndex]];
     

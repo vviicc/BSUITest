@@ -7,12 +7,15 @@
 //
 
 #import "BSAppDelegate.h"
+#import "BSUITestManager.h"
 
 @implementation BSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [BSUITestManager sharedManager].enable = YES;
     return YES;
 }
 

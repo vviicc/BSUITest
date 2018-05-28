@@ -9,4 +9,6 @@
 
 @interface BSUITestWindow : UIWindow
 
+@property (nonatomic, assign) CGPoint viewCenter;
+
 @end

@@ -7,14 +7,22 @@
 
 #import <Foundation/Foundation.h>
 
-@import CoreGraphics;
-
 @interface BSUITestManager : NSObject
 
 + (instancetype)sharedManager;
 
-@property (nonatomic, assign) BOOL enable;
+/**
+ 开启UITest
 
-@property (nonatomic, assign)  CGPoint windowCenter;
+ @param enable 是否开启
+ */
+- (void)setEnable:(BOOL)enable;
+
+/**
+ 设置center，如果不设置默认在顶部居中
+
+ @param viewCenter 中心点
+ */
+- (void)setViewCenter:(CGPoint)viewCenter;
 
 @end

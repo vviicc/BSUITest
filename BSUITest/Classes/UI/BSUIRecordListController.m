@@ -26,6 +26,7 @@ static NSString * const kBSRecordListCellIdentifier  = @"kBSRecordListCellIdenti
 @property (nonatomic, strong) UILabel *dateLabel;
 @property (nonatomic, strong) UIButton *playbackBtn;
 @property (nonatomic, strong) UIButton *videoBtn;
+
 @property (nonatomic, assign) int32_t cellIndex;
 @end
 
@@ -109,6 +110,7 @@ static NSString * const kBSRecordListCellIdentifier  = @"kBSRecordListCellIdenti
 @property (nonatomic, strong) UILabel *screenRecLabel;
 @property (nonatomic, strong) UISwitch *screenRecSwitch;
 @property (nonatomic, strong) UILabel *emptyLabel;
+
 @property (nonatomic, strong) NSMutableArray<NSString *> *recFileNames;
 
 @end
@@ -118,7 +120,8 @@ static NSString * const kBSRecordListCellIdentifier  = @"kBSRecordListCellIdenti
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.recFileNames = [NSMutableArray arrayWithArray:[BSUITestFileHelper historyLogTouchPath]];
+    self.recFileNames = [NSMutableArray arrayWithArray:[BSUITestFileHelper historyRecordPath]];
+    
     [self initViews];
 }
 
@@ -141,6 +144,7 @@ static NSString * const kBSRecordListCellIdentifier  = @"kBSRecordListCellIdenti
     tableView.dataSource = self;
     tableView.delegate = self;
     tableView.backgroundColor = [UIColor whiteColor];
+    tableView.rowHeight = 66;
     [tableView registerClass:[BSRecordListCell class] forCellReuseIdentifier:kBSRecordListCellIdentifier];
     self.tableView = tableView;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
@@ -198,11 +202,6 @@ static NSString * const kBSRecordListCellIdentifier  = @"kBSRecordListCellIdenti
     return self.recFileNames.count;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 66;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BSRecordListCell *cell = [tableView dequeueReusableCellWithIdentifier:kBSRecordListCellIdentifier forIndexPath:indexPath];
@@ -217,10 +216,9 @@ static NSString * const kBSRecordListCellIdentifier  = @"kBSRecordListCellIdenti
     }];
     
     __weak __typeof(self)weakSelf = self;
-    
     cell.didClickReplay = ^(int32_t cellIndex) {
         if (cellIndex < weakSelf.recFileNames.count) {
-            NSString *fileName = self.recFileNames[cellIndex];
+            NSString *fileName = weakSelf.recFileNames[cellIndex];
             [weakSelf replayRecord:fileName];
         }
     };

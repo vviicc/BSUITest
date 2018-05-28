@@ -7,6 +7,10 @@
 
 #import <UIKit/UIKit.h>
 
+
+/**
+ 最近录制控制器
+ */
 @interface BSUIRecordListController : UIViewController
 
 @end
