@@ -1,17 +1,18 @@
 //
-//  MFVideoPlayerView.m
-//  pkgame iOS
+//  BSUIVideoPlayerView.m
+//  Pods
 //
-//  Created by Vic on 2018/5/22.
+//  Created by Vic on 2018/5/28.
 //
 
-#import "MFVideoPlayerView.h"
+#import "BSUIVideoPlayerView.h"
 
 @import AVFoundation;
 
-@interface MFVideoPlayerView()
+@interface BSUIVideoPlayerView()
+
 @property (nonatomic, strong) NSURL *videoURL;
-@property (nonatomic, assign) BOOL canDrag;
+
 @property (nonatomic, strong) AVAsset *avAsset;
 @property (nonatomic, strong) AVPlayerItem *playerItem;
 @property (nonatomic, strong) AVPlayer *avPlayer;
@@ -23,25 +24,31 @@
 @property (nonatomic, strong) UILabel *playTimeLabel;
 @property (nonatomic, strong) UISlider *sliderView;
 @property (nonatomic, strong) UILabel *playDurationLabel;
+
 @end
 
-@implementation MFVideoPlayerView
+@implementation BSUIVideoPlayerView
 
-- (instancetype)initWithFrame:(CGRect)frame videoURL:(NSURL *)videoURL canDrag:(BOOL)canDrag
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    NSAssert(NO, @"use initWithFrame:videoURL instead");
+    return nil;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame videoURL:(NSURL *)videoURL
 {
     if (self = [super initWithFrame:frame]) {
         self.videoURL = videoURL;
-        self.canDrag = canDrag;
         [self initViews];
     }
     
     return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (void)dealloc
 {
-    NSAssert(NO, @"use initWithFrame:videoURL instead");
-    return nil;
+    [self removeVideoKVO];
+    [self removeTimeObserver];
 }
 
 - (void)layoutSubviews
@@ -54,12 +61,6 @@
     self.playTimeLabel.frame = CGRectMake(15, 0, 35, CGRectGetHeight(self.bottomView.bounds));
     self.sliderView.frame = CGRectMake(CGRectGetMaxX(self.playTimeLabel.frame) + 5, 0, CGRectGetWidth(self.bounds) - 110, CGRectGetHeight(self.bottomView.bounds));
     self.playDurationLabel.frame = CGRectMake(CGRectGetWidth(self.bottomView.bounds) - 50, 0, 35, CGRectGetHeight(self.bottomView.bounds));
-}
-
-- (void)dealloc
-{
-    [self removeVideoKVO];
-    [self removeTimeObserver];
 }
 
 - (void)initViews
@@ -116,6 +117,7 @@
     if (self.avPlayer.status == AVPlayerStatusReadyToPlay) {
         NSTimeInterval time = percent * CMTimeGetSeconds(self.avPlayer.currentItem.duration);
         CMTime seekTime = CMTimeMakeWithSeconds(time, NSEC_PER_SEC);
+        
         __weak __typeof(self) weakSelf = self;
         [self.avPlayer seekToTime:seekTime completionHandler:^(BOOL finished) {
             [weakSelf.avPlayer play];
@@ -127,7 +129,6 @@
 {
     if (self.avPlayer.status == AVPlayerStatusReadyToPlay) {
         __weak __typeof(self) weakSelf = self;
-        
         [self.avPlayer seekToTime:kCMTimeZero completionHandler:^(BOOL finished) {
             if (finished) {
                 [weakSelf.avPlayer play];
@@ -162,7 +163,7 @@
     if (!_avPlayer) {
         _avPlayer = [AVPlayer playerWithPlayerItem:self.playerItem];
         
-        __weak MFVideoPlayerView *weakSelf = self;
+        __weak __typeof(self) weakSelf = self;
         self.timeObserver = [_avPlayer addPeriodicTimeObserverForInterval:CMTimeMake(1, NSEC_PER_SEC) queue:dispatch_get_main_queue() usingBlock:^(CMTime time) {
             [weakSelf handlePlayPeriodicTimer:time];
         }];
@@ -211,12 +212,10 @@
         _sliderView = [[UISlider alloc] initWithFrame:CGRectZero];
         _sliderView.minimumTrackTintColor = [UIColor colorWithWhite:1 alpha:0.7];
         _sliderView.maximumTrackTintColor = [UIColor whiteColor];
-        CGFloat sliderWidth = self.canDrag ? 15 : 5;
+        CGFloat sliderWidth = 15;
         [_sliderView setThumbImage:[self imageFromColor:[UIColor whiteColor] size:CGSizeMake(sliderWidth, sliderWidth)] forState:UIControlStateNormal];
         
-        if (self.canDrag) {
-            [_sliderView addTarget:self action:@selector(onSliderChanged:) forControlEvents:UIControlEventValueChanged];
-        }
+        [_sliderView addTarget:self action:@selector(onSliderChanged:) forControlEvents:UIControlEventValueChanged];
     }
     
     return _sliderView;

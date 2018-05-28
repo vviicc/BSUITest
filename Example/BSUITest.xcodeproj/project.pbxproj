@@ -537,6 +537,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SKY9AYAMG2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BSUITest\"",
+					"\"$(SRCROOT)/../BSUITest/Classes/Vendor\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BSUITest/BSUITest-Prefix.pch";
 				INFOPLIST_FILE = "BSUITest/BSUITest-Info.plist";
@@ -555,6 +560,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SKY9AYAMG2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BSUITest\"",
+					"\"$(SRCROOT)/../../BSUITest/Classes/Vendor\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BSUITest/BSUITest-Prefix.pch";
 				INFOPLIST_FILE = "BSUITest/BSUITest-Info.plist";

@@ -1,22 +1,21 @@
 //
-//  MFPlayVideoController.m
-//  pkgame iOS
+//  BSUIVideoPlayerController.m
+//  Pods
 //
-//  Created by Vic on 2018/5/22.
+//  Created by Vic on 2018/5/28.
 //
 
-#import "MFPlayVideoController.h"
-#import "MFVideoPlayerView.h"
+#import "BSUIVideoPlayerController.h"
+#import "BSUIVideoPlayerView.h"
 
-
-@interface MFPlayVideoController ()
+@interface BSUIVideoPlayerController ()
 
 @property (nonatomic, strong) UIButton *closeBtn;
-@property (nonatomic, strong) MFVideoPlayerView *playerView;
+@property (nonatomic, strong) BSUIVideoPlayerView *playerView;
 
 @end
 
-@implementation MFPlayVideoController
+@implementation BSUIVideoPlayerController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,7 +32,7 @@
 
 - (void)initViews
 {
-    self.playerView = [[MFVideoPlayerView alloc] initWithFrame:CGRectZero videoURL:self.videoURL canDrag:YES];
+    self.playerView = [[BSUIVideoPlayerView alloc] initWithFrame:CGRectZero videoURL:self.videoURL];
     [self.view addSubview:self.playerView];
     
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectZero];

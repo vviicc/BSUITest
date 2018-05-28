@@ -10,22 +10,51 @@
 		1C8D82BE20B95973008AA52A /* PTFakeTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8D82BD20B95973008AA52A /* PTFakeTouch.framework */; };
 		1C8D82BF20B95973008AA52A /* PTFakeTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8D82BD20B95973008AA52A /* PTFakeTouch.framework */; };
 		1C8D82C120B95B98008AA52A /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8D82C020B95B77008AA52A /* IOKit.framework */; };
-		1CDE66CD20B951DA000EDA8D /* MFRecVideoListController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66BD20B951D6000EDA8D /* MFRecVideoListController.h */; };
-		1CDE66CE20B951DA000EDA8D /* MFRecWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66BE20B951D7000EDA8D /* MFRecWindow.h */; };
-		1CDE66CF20B951DA000EDA8D /* MFVideoCompareController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66BF20B951D7000EDA8D /* MFVideoCompareController.h */; };
-		1CDE66D020B951DA000EDA8D /* MFVideoCompareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66C020B951D7000EDA8D /* MFVideoCompareController.m */; };
-		1CDE66D120B951DA000EDA8D /* MFRecMainController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66C120B951D7000EDA8D /* MFRecMainController.h */; };
-		1CDE66D220B951DA000EDA8D /* MFVideoPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66C220B951D8000EDA8D /* MFVideoPlayerView.h */; };
-		1CDE66D320B951DA000EDA8D /* MFVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66C320B951D8000EDA8D /* MFVideoPlayerView.m */; };
-		1CDE66D420B951DA000EDA8D /* MFRecWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66C420B951D8000EDA8D /* MFRecWindow.m */; };
-		1CDE66D520B951DA000EDA8D /* MFRecHistoryController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66C520B951D8000EDA8D /* MFRecHistoryController.h */; };
-		1CDE66D620B951DA000EDA8D /* MFRecMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66C620B951D8000EDA8D /* MFRecMainController.m */; };
-		1CDE66D720B951DA000EDA8D /* MFPlayVideoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66C720B951D8000EDA8D /* MFPlayVideoController.m */; };
-		1CDE66D820B951DA000EDA8D /* MFRecVideoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66C820B951D9000EDA8D /* MFRecVideoListController.m */; };
-		1CDE66D920B951DA000EDA8D /* MFRecHistoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66C920B951D9000EDA8D /* MFRecHistoryController.m */; };
-		1CDE66DA20B951DA000EDA8D /* MFDiffImageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66CA20B951D9000EDA8D /* MFDiffImageController.h */; };
-		1CDE66DB20B951DA000EDA8D /* MFPlayVideoController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66CB20B951D9000EDA8D /* MFPlayVideoController.h */; };
-		1CDE66DC20B951DA000EDA8D /* MFDiffImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66CC20B951D9000EDA8D /* MFDiffImageController.m */; };
+		1C8D82D020BBA2C4008AA52A /* BSUITestLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82CE20BBA2C4008AA52A /* BSUITestLogic.h */; };
+		1C8D82D120BBA2C4008AA52A /* BSUITestLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82CE20BBA2C4008AA52A /* BSUITestLogic.h */; };
+		1C8D82D220BBA2C4008AA52A /* BSUITestLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82CF20BBA2C4008AA52A /* BSUITestLogic.m */; };
+		1C8D82D320BBA2C4008AA52A /* BSUITestLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82CF20BBA2C4008AA52A /* BSUITestLogic.m */; };
+		1C8D82D620BBA2E3008AA52A /* BSUITestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82D420BBA2E3008AA52A /* BSUITestManager.h */; };
+		1C8D82D720BBA2E3008AA52A /* BSUITestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82D420BBA2E3008AA52A /* BSUITestManager.h */; };
+		1C8D82D820BBA2E3008AA52A /* BSUITestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82D520BBA2E3008AA52A /* BSUITestManager.m */; };
+		1C8D82D920BBA2E3008AA52A /* BSUITestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82D520BBA2E3008AA52A /* BSUITestManager.m */; };
+		1C8D82DC20BBA304008AA52A /* BSUITestFileHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82DA20BBA304008AA52A /* BSUITestFileHelper.h */; };
+		1C8D82DD20BBA304008AA52A /* BSUITestFileHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82DA20BBA304008AA52A /* BSUITestFileHelper.h */; };
+		1C8D82DE20BBA304008AA52A /* BSUITestFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82DB20BBA304008AA52A /* BSUITestFileHelper.m */; };
+		1C8D82DF20BBA304008AA52A /* BSUITestFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82DB20BBA304008AA52A /* BSUITestFileHelper.m */; };
+		1C8D82E220BBA344008AA52A /* BSUITestWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82E020BBA344008AA52A /* BSUITestWindow.h */; };
+		1C8D82E320BBA344008AA52A /* BSUITestWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82E020BBA344008AA52A /* BSUITestWindow.h */; };
+		1C8D82E420BBA344008AA52A /* BSUITestWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82E120BBA344008AA52A /* BSUITestWindow.m */; };
+		1C8D82E520BBA344008AA52A /* BSUITestWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82E120BBA344008AA52A /* BSUITestWindow.m */; };
+		1C8D82E820BBA3A8008AA52A /* BSUIRootController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82E620BBA3A8008AA52A /* BSUIRootController.h */; };
+		1C8D82E920BBA3A8008AA52A /* BSUIRootController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82E620BBA3A8008AA52A /* BSUIRootController.h */; };
+		1C8D82EA20BBA3A8008AA52A /* BSUIRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82E720BBA3A8008AA52A /* BSUIRootController.m */; };
+		1C8D82EB20BBA3A8008AA52A /* BSUIRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82E720BBA3A8008AA52A /* BSUIRootController.m */; };
+		1C8D82FA20BBA419008AA52A /* BSUIVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82F820BBA419008AA52A /* BSUIVideoPlayerController.h */; };
+		1C8D82FB20BBA419008AA52A /* BSUIVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82F820BBA419008AA52A /* BSUIVideoPlayerController.h */; };
+		1C8D82FC20BBA419008AA52A /* BSUIVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82F920BBA419008AA52A /* BSUIVideoPlayerController.m */; };
+		1C8D82FD20BBA419008AA52A /* BSUIVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82F920BBA419008AA52A /* BSUIVideoPlayerController.m */; };
+		1C8D830020BBA45A008AA52A /* BSUIVideoCompareController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82FE20BBA45A008AA52A /* BSUIVideoCompareController.h */; };
+		1C8D830120BBA45A008AA52A /* BSUIVideoCompareController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D82FE20BBA45A008AA52A /* BSUIVideoCompareController.h */; };
+		1C8D830220BBA45A008AA52A /* BSUIVideoCompareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82FF20BBA45A008AA52A /* BSUIVideoCompareController.m */; };
+		1C8D830320BBA45A008AA52A /* BSUIVideoCompareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D82FF20BBA45A008AA52A /* BSUIVideoCompareController.m */; };
+		1C8D830620BBA477008AA52A /* BSUIDiffImageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D830420BBA477008AA52A /* BSUIDiffImageController.h */; };
+		1C8D830720BBA477008AA52A /* BSUIDiffImageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D830420BBA477008AA52A /* BSUIDiffImageController.h */; };
+		1C8D830820BBA477008AA52A /* BSUIDiffImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D830520BBA477008AA52A /* BSUIDiffImageController.m */; };
+		1C8D830920BBA477008AA52A /* BSUIDiffImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D830520BBA477008AA52A /* BSUIDiffImageController.m */; };
+		1C8D830C20BBA4A5008AA52A /* BSUIVideoPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D830A20BBA4A5008AA52A /* BSUIVideoPlayerView.h */; };
+		1C8D830D20BBA4A5008AA52A /* BSUIVideoPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D830A20BBA4A5008AA52A /* BSUIVideoPlayerView.h */; };
+		1C8D830E20BBA4A5008AA52A /* BSUIVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D830B20BBA4A5008AA52A /* BSUIVideoPlayerView.m */; };
+		1C8D830F20BBA4A5008AA52A /* BSUIVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D830B20BBA4A5008AA52A /* BSUIVideoPlayerView.m */; };
+		1C8D831220BBB414008AA52A /* BSUIVideoListController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D831020BBB414008AA52A /* BSUIVideoListController.h */; };
+		1C8D831320BBB414008AA52A /* BSUIVideoListController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D831020BBB414008AA52A /* BSUIVideoListController.h */; };
+		1C8D831420BBB414008AA52A /* BSUIVideoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D831120BBB414008AA52A /* BSUIVideoListController.m */; };
+		1C8D831520BBB414008AA52A /* BSUIVideoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D831120BBB414008AA52A /* BSUIVideoListController.m */; };
+		1C8D831820BBB43B008AA52A /* BSUIRecordListController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D831620BBB43B008AA52A /* BSUIRecordListController.h */; };
+		1C8D831920BBB43B008AA52A /* BSUIRecordListController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C8D831620BBB43B008AA52A /* BSUIRecordListController.h */; };
+		1C8D831A20BBB43B008AA52A /* BSUIRecordListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D831720BBB43B008AA52A /* BSUIRecordListController.m */; };
+		1C8D831B20BBB43B008AA52A /* BSUIRecordListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D831720BBB43B008AA52A /* BSUIRecordListController.m */; };
+		1C8D831D20BBDF0E008AA52A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C8D831C20BBDF0E008AA52A /* CoreGraphics.framework */; };
 		1CDE66E620B951EA000EDA8D /* KTouchPointerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66DD20B951E8000EDA8D /* KTouchPointerWindow.m */; };
 		1CDE66E720B951EA000EDA8D /* SRScreenRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66DE20B951E8000EDA8D /* SRScreenRecorder.h */; };
 		1CDE66E920B951EA000EDA8D /* TPPreciseTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66E020B951E9000EDA8D /* TPPreciseTimer.h */; };
@@ -34,12 +63,6 @@
 		1CDE66EC20B951EA000EDA8D /* UIImage+PHA.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66E320B951E9000EDA8D /* UIImage+PHA.h */; };
 		1CDE66ED20B951EA000EDA8D /* UIImage+PHA.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66E420B951E9000EDA8D /* UIImage+PHA.m */; };
 		1CDE66EE20B951EA000EDA8D /* KTouchPointerWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66E520B951EA000EDA8D /* KTouchPointerWindow.h */; };
-		1CDE66F520B951F8000EDA8D /* UIApplication+UITest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66EF20B951F6000EDA8D /* UIApplication+UITest.m */; };
-		1CDE66F620B951F8000EDA8D /* MFRecReplay.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66F020B951F7000EDA8D /* MFRecReplay.h */; };
-		1CDE66F720B951F8000EDA8D /* MFRecReplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66F120B951F7000EDA8D /* MFRecReplay.m */; };
-		1CDE66F820B951F8000EDA8D /* MFUITestMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDE66F220B951F7000EDA8D /* MFUITestMgr.m */; };
-		1CDE66F920B951F8000EDA8D /* MFUITestMgr.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66F320B951F7000EDA8D /* MFUITestMgr.h */; };
-		1CDE66FA20B951F8000EDA8D /* UIApplication+UITest.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDE66F420B951F8000EDA8D /* UIApplication+UITest.h */; };
 		2BEE1751F1DA81C4210AA2AA5C65E8FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		318FF01D6473525EA18B1C37556F6E97 /* Pods-BSUITest_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F195931E2881EB9ED2CB3AA078622B63 /* Pods-BSUITest_Example-dummy.m */; };
 		557AF34558A807263BB984A1F3758CE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
@@ -66,23 +89,30 @@
 		1BC86870BDEB15C2FC44BF5AF2151799 /* BSUITest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BSUITest.modulemap; sourceTree = "<group>"; };
 		1C8D82BD20B95973008AA52A /* PTFakeTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PTFakeTouch.framework; sourceTree = "<group>"; };
 		1C8D82C020B95B77008AA52A /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		1C8D82CE20BBA2C4008AA52A /* BSUITestLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSUITestLogic.h; sourceTree = "<group>"; };
+		1C8D82CF20BBA2C4008AA52A /* BSUITestLogic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSUITestLogic.m; sourceTree = "<group>"; };
+		1C8D82D420BBA2E3008AA52A /* BSUITestManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSUITestManager.h; sourceTree = "<group>"; };
+		1C8D82D520BBA2E3008AA52A /* BSUITestManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSUITestManager.m; sourceTree = "<group>"; };
+		1C8D82DA20BBA304008AA52A /* BSUITestFileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSUITestFileHelper.h; sourceTree = "<group>"; };
+		1C8D82DB20BBA304008AA52A /* BSUITestFileHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSUITestFileHelper.m; sourceTree = "<group>"; };
+		1C8D82E020BBA344008AA52A /* BSUITestWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSUITestWindow.h; sourceTree = "<group>"; };
+		1C8D82E120BBA344008AA52A /* BSUITestWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSUITestWindow.m; sourceTree = "<group>"; };
+		1C8D82E620BBA3A8008AA52A /* BSUIRootController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSUIRootController.h; sourceTree = "<group>"; };
+		1C8D82E720BBA3A8008AA52A /* BSUIRootController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSUIRootController.m; sourceTree = "<group>"; };
+		1C8D82F820BBA419008AA52A /* BSUIVideoPlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSUIVideoPlayerController.h; sourceTree = "<group>"; };
+		1C8D82F920BBA419008AA52A /* BSUIVideoPlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSUIVideoPlayerController.m; sourceTree = "<group>"; };
+		1C8D82FE20BBA45A008AA52A /* BSUIVideoCompareController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSUIVideoCompareController.h; sourceTree = "<group>"; };
+		1C8D82FF20BBA45A008AA52A /* BSUIVideoCompareController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSUIVideoCompareController.m; sourceTree = "<group>"; };
+		1C8D830420BBA477008AA52A /* BSUIDiffImageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSUIDiffImageController.h; sourceTree = "<group>"; };
+		1C8D830520BBA477008AA52A /* BSUIDiffImageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSUIDiffImageController.m; sourceTree = "<group>"; };
+		1C8D830A20BBA4A5008AA52A /* BSUIVideoPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSUIVideoPlayerView.h; sourceTree = "<group>"; };
+		1C8D830B20BBA4A5008AA52A /* BSUIVideoPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSUIVideoPlayerView.m; sourceTree = "<group>"; };
+		1C8D831020BBB414008AA52A /* BSUIVideoListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSUIVideoListController.h; sourceTree = "<group>"; };
+		1C8D831120BBB414008AA52A /* BSUIVideoListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSUIVideoListController.m; sourceTree = "<group>"; };
+		1C8D831620BBB43B008AA52A /* BSUIRecordListController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSUIRecordListController.h; sourceTree = "<group>"; };
+		1C8D831720BBB43B008AA52A /* BSUIRecordListController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSUIRecordListController.m; sourceTree = "<group>"; };
+		1C8D831C20BBDF0E008AA52A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		1CDE66BA20B94EFA000EDA8D /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		1CDE66BD20B951D6000EDA8D /* MFRecVideoListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFRecVideoListController.h; sourceTree = "<group>"; };
-		1CDE66BE20B951D7000EDA8D /* MFRecWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFRecWindow.h; sourceTree = "<group>"; };
-		1CDE66BF20B951D7000EDA8D /* MFVideoCompareController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFVideoCompareController.h; sourceTree = "<group>"; };
-		1CDE66C020B951D7000EDA8D /* MFVideoCompareController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFVideoCompareController.m; sourceTree = "<group>"; };
-		1CDE66C120B951D7000EDA8D /* MFRecMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFRecMainController.h; sourceTree = "<group>"; };
-		1CDE66C220B951D8000EDA8D /* MFVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFVideoPlayerView.h; sourceTree = "<group>"; };
-		1CDE66C320B951D8000EDA8D /* MFVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFVideoPlayerView.m; sourceTree = "<group>"; };
-		1CDE66C420B951D8000EDA8D /* MFRecWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFRecWindow.m; sourceTree = "<group>"; };
-		1CDE66C520B951D8000EDA8D /* MFRecHistoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFRecHistoryController.h; sourceTree = "<group>"; };
-		1CDE66C620B951D8000EDA8D /* MFRecMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFRecMainController.m; sourceTree = "<group>"; };
-		1CDE66C720B951D8000EDA8D /* MFPlayVideoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFPlayVideoController.m; sourceTree = "<group>"; };
-		1CDE66C820B951D9000EDA8D /* MFRecVideoListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFRecVideoListController.m; sourceTree = "<group>"; };
-		1CDE66C920B951D9000EDA8D /* MFRecHistoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFRecHistoryController.m; sourceTree = "<group>"; };
-		1CDE66CA20B951D9000EDA8D /* MFDiffImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFDiffImageController.h; sourceTree = "<group>"; };
-		1CDE66CB20B951D9000EDA8D /* MFPlayVideoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFPlayVideoController.h; sourceTree = "<group>"; };
-		1CDE66CC20B951D9000EDA8D /* MFDiffImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFDiffImageController.m; sourceTree = "<group>"; };
 		1CDE66DD20B951E8000EDA8D /* KTouchPointerWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTouchPointerWindow.m; sourceTree = "<group>"; };
 		1CDE66DE20B951E8000EDA8D /* SRScreenRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRScreenRecorder.h; sourceTree = "<group>"; };
 		1CDE66E020B951E9000EDA8D /* TPPreciseTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPPreciseTimer.h; sourceTree = "<group>"; };
@@ -91,12 +121,6 @@
 		1CDE66E320B951E9000EDA8D /* UIImage+PHA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PHA.h"; sourceTree = "<group>"; };
 		1CDE66E420B951E9000EDA8D /* UIImage+PHA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PHA.m"; sourceTree = "<group>"; };
 		1CDE66E520B951EA000EDA8D /* KTouchPointerWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTouchPointerWindow.h; sourceTree = "<group>"; };
-		1CDE66EF20B951F6000EDA8D /* UIApplication+UITest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+UITest.m"; sourceTree = "<group>"; };
-		1CDE66F020B951F7000EDA8D /* MFRecReplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFRecReplay.h; sourceTree = "<group>"; };
-		1CDE66F120B951F7000EDA8D /* MFRecReplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFRecReplay.m; sourceTree = "<group>"; };
-		1CDE66F220B951F7000EDA8D /* MFUITestMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFUITestMgr.m; sourceTree = "<group>"; };
-		1CDE66F320B951F7000EDA8D /* MFUITestMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFUITestMgr.h; sourceTree = "<group>"; };
-		1CDE66F420B951F8000EDA8D /* UIApplication+UITest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+UITest.h"; sourceTree = "<group>"; };
 		20AED87F921F74F6A3629E0591D81949 /* Pods-BSUITest_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BSUITest_Example-umbrella.h"; sourceTree = "<group>"; };
 		29EDA1976AFA309543D24BD2FF27D70A /* Pods-BSUITest_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BSUITest_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		29FECEEEC504989C56D16CA19F17E3AE /* Pods-BSUITest_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BSUITest_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				960D6114A95DE42A6B644E4AA21E9167 /* Foundation.framework in Frameworks */,
+				1C8D831D20BBDF0E008AA52A /* CoreGraphics.framework in Frameworks */,
 				1C8D82BE20B95973008AA52A /* PTFakeTouch.framework in Frameworks */,
 				1C8D82C120B95B98008AA52A /* IOKit.framework in Frameworks */,
 			);
@@ -165,12 +190,12 @@
 		1CDE66B920B94EFA000EDA8D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1CDE66F020B951F7000EDA8D /* MFRecReplay.h */,
-				1CDE66F120B951F7000EDA8D /* MFRecReplay.m */,
-				1CDE66F320B951F7000EDA8D /* MFUITestMgr.h */,
-				1CDE66F220B951F7000EDA8D /* MFUITestMgr.m */,
-				1CDE66F420B951F8000EDA8D /* UIApplication+UITest.h */,
-				1CDE66EF20B951F6000EDA8D /* UIApplication+UITest.m */,
+				1C8D82D420BBA2E3008AA52A /* BSUITestManager.h */,
+				1C8D82D520BBA2E3008AA52A /* BSUITestManager.m */,
+				1C8D82CE20BBA2C4008AA52A /* BSUITestLogic.h */,
+				1C8D82CF20BBA2C4008AA52A /* BSUITestLogic.m */,
+				1C8D82DA20BBA304008AA52A /* BSUITestFileHelper.h */,
+				1C8D82DB20BBA304008AA52A /* BSUITestFileHelper.m */,
 				1CDE66BC20B95076000EDA8D /* UI */,
 				1CDE66BB20B9502E000EDA8D /* Vendor */,
 				1CDE66BA20B94EFA000EDA8D /* .gitkeep */,
@@ -198,22 +223,22 @@
 		1CDE66BC20B95076000EDA8D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				1CDE66CA20B951D9000EDA8D /* MFDiffImageController.h */,
-				1CDE66CC20B951D9000EDA8D /* MFDiffImageController.m */,
-				1CDE66CB20B951D9000EDA8D /* MFPlayVideoController.h */,
-				1CDE66C720B951D8000EDA8D /* MFPlayVideoController.m */,
-				1CDE66C520B951D8000EDA8D /* MFRecHistoryController.h */,
-				1CDE66C920B951D9000EDA8D /* MFRecHistoryController.m */,
-				1CDE66C120B951D7000EDA8D /* MFRecMainController.h */,
-				1CDE66C620B951D8000EDA8D /* MFRecMainController.m */,
-				1CDE66BD20B951D6000EDA8D /* MFRecVideoListController.h */,
-				1CDE66C820B951D9000EDA8D /* MFRecVideoListController.m */,
-				1CDE66BE20B951D7000EDA8D /* MFRecWindow.h */,
-				1CDE66C420B951D8000EDA8D /* MFRecWindow.m */,
-				1CDE66BF20B951D7000EDA8D /* MFVideoCompareController.h */,
-				1CDE66C020B951D7000EDA8D /* MFVideoCompareController.m */,
-				1CDE66C220B951D8000EDA8D /* MFVideoPlayerView.h */,
-				1CDE66C320B951D8000EDA8D /* MFVideoPlayerView.m */,
+				1C8D82E020BBA344008AA52A /* BSUITestWindow.h */,
+				1C8D82E120BBA344008AA52A /* BSUITestWindow.m */,
+				1C8D82E620BBA3A8008AA52A /* BSUIRootController.h */,
+				1C8D82E720BBA3A8008AA52A /* BSUIRootController.m */,
+				1C8D831620BBB43B008AA52A /* BSUIRecordListController.h */,
+				1C8D831720BBB43B008AA52A /* BSUIRecordListController.m */,
+				1C8D831020BBB414008AA52A /* BSUIVideoListController.h */,
+				1C8D831120BBB414008AA52A /* BSUIVideoListController.m */,
+				1C8D82F820BBA419008AA52A /* BSUIVideoPlayerController.h */,
+				1C8D82F920BBA419008AA52A /* BSUIVideoPlayerController.m */,
+				1C8D82FE20BBA45A008AA52A /* BSUIVideoCompareController.h */,
+				1C8D82FF20BBA45A008AA52A /* BSUIVideoCompareController.m */,
+				1C8D830420BBA477008AA52A /* BSUIDiffImageController.h */,
+				1C8D830520BBA477008AA52A /* BSUIDiffImageController.m */,
+				1C8D830A20BBA4A5008AA52A /* BSUIVideoPlayerView.h */,
+				1C8D830B20BBA4A5008AA52A /* BSUIVideoPlayerView.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -304,6 +329,7 @@
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C8D831C20BBDF0E008AA52A /* CoreGraphics.framework */,
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
@@ -351,22 +377,22 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C8D82D020BBA2C4008AA52A /* BSUITestLogic.h in Headers */,
 				1CDE66EC20B951EA000EDA8D /* UIImage+PHA.h in Headers */,
-				1CDE66DA20B951DA000EDA8D /* MFDiffImageController.h in Headers */,
-				1CDE66D520B951DA000EDA8D /* MFRecHistoryController.h in Headers */,
+				1C8D82E820BBA3A8008AA52A /* BSUIRootController.h in Headers */,
+				1C8D82FA20BBA419008AA52A /* BSUIVideoPlayerController.h in Headers */,
 				1CDE66E920B951EA000EDA8D /* TPPreciseTimer.h in Headers */,
+				1C8D831820BBB43B008AA52A /* BSUIRecordListController.h in Headers */,
 				1CDE66EE20B951EA000EDA8D /* KTouchPointerWindow.h in Headers */,
-				1CDE66CD20B951DA000EDA8D /* MFRecVideoListController.h in Headers */,
-				1CDE66CF20B951DA000EDA8D /* MFVideoCompareController.h in Headers */,
-				1CDE66FA20B951F8000EDA8D /* UIApplication+UITest.h in Headers */,
+				1C8D830C20BBA4A5008AA52A /* BSUIVideoPlayerView.h in Headers */,
+				1C8D831220BBB414008AA52A /* BSUIVideoListController.h in Headers */,
+				1C8D82DC20BBA304008AA52A /* BSUITestFileHelper.h in Headers */,
+				1C8D82E220BBA344008AA52A /* BSUITestWindow.h in Headers */,
 				9F48FE63390C59E91ACE96567D01B0A0 /* BSUITest-umbrella.h in Headers */,
-				1CDE66D220B951DA000EDA8D /* MFVideoPlayerView.h in Headers */,
-				1CDE66CE20B951DA000EDA8D /* MFRecWindow.h in Headers */,
-				1CDE66DB20B951DA000EDA8D /* MFPlayVideoController.h in Headers */,
-				1CDE66F920B951F8000EDA8D /* MFUITestMgr.h in Headers */,
-				1CDE66D120B951DA000EDA8D /* MFRecMainController.h in Headers */,
+				1C8D830620BBA477008AA52A /* BSUIDiffImageController.h in Headers */,
+				1C8D830020BBA45A008AA52A /* BSUIVideoCompareController.h in Headers */,
 				1CDE66E720B951EA000EDA8D /* SRScreenRecorder.h in Headers */,
-				1CDE66F620B951F8000EDA8D /* MFRecReplay.h in Headers */,
+				1C8D82D620BBA2E3008AA52A /* BSUITestManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +408,18 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C8D82D120BBA2C4008AA52A /* BSUITestLogic.h in Headers */,
+				1C8D82DD20BBA304008AA52A /* BSUITestFileHelper.h in Headers */,
+				1C8D830120BBA45A008AA52A /* BSUIVideoCompareController.h in Headers */,
+				1C8D830720BBA477008AA52A /* BSUIDiffImageController.h in Headers */,
+				1C8D830D20BBA4A5008AA52A /* BSUIVideoPlayerView.h in Headers */,
 				745F793B957B30C86953FCCE1C7C1BD9 /* Pods-BSUITest_Example-umbrella.h in Headers */,
+				1C8D82FB20BBA419008AA52A /* BSUIVideoPlayerController.h in Headers */,
+				1C8D82E920BBA3A8008AA52A /* BSUIRootController.h in Headers */,
+				1C8D831320BBB414008AA52A /* BSUIVideoListController.h in Headers */,
+				1C8D82D720BBA2E3008AA52A /* BSUITestManager.h in Headers */,
+				1C8D831920BBB43B008AA52A /* BSUIRecordListController.h in Headers */,
+				1C8D82E320BBA344008AA52A /* BSUITestWindow.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,22 +519,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CDE66D820B951DA000EDA8D /* MFRecVideoListController.m in Sources */,
+				1C8D82FC20BBA419008AA52A /* BSUIVideoPlayerController.m in Sources */,
 				1CDE66ED20B951EA000EDA8D /* UIImage+PHA.m in Sources */,
-				1CDE66F720B951F8000EDA8D /* MFRecReplay.m in Sources */,
+				1C8D830820BBA477008AA52A /* BSUIDiffImageController.m in Sources */,
+				1C8D830220BBA45A008AA52A /* BSUIVideoCompareController.m in Sources */,
+				1C8D82D820BBA2E3008AA52A /* BSUITestManager.m in Sources */,
+				1C8D831420BBB414008AA52A /* BSUIVideoListController.m in Sources */,
 				1CDE66E620B951EA000EDA8D /* KTouchPointerWindow.m in Sources */,
-				1CDE66D320B951DA000EDA8D /* MFVideoPlayerView.m in Sources */,
-				1CDE66D420B951DA000EDA8D /* MFRecWindow.m in Sources */,
-				1CDE66DC20B951DA000EDA8D /* MFDiffImageController.m in Sources */,
-				1CDE66D020B951DA000EDA8D /* MFVideoCompareController.m in Sources */,
+				1C8D82EA20BBA3A8008AA52A /* BSUIRootController.m in Sources */,
 				F00D3930E8F5EDDF22AB6999B0544417 /* BSUITest-dummy.m in Sources */,
-				1CDE66F520B951F8000EDA8D /* UIApplication+UITest.m in Sources */,
-				1CDE66D720B951DA000EDA8D /* MFPlayVideoController.m in Sources */,
-				1CDE66D920B951DA000EDA8D /* MFRecHistoryController.m in Sources */,
 				1CDE66EA20B951EA000EDA8D /* SRScreenRecorder.m in Sources */,
-				1CDE66D620B951DA000EDA8D /* MFRecMainController.m in Sources */,
+				1C8D82E420BBA344008AA52A /* BSUITestWindow.m in Sources */,
+				1C8D82DE20BBA304008AA52A /* BSUITestFileHelper.m in Sources */,
 				1CDE66EB20B951EA000EDA8D /* TPPreciseTimer.m in Sources */,
-				1CDE66F820B951F8000EDA8D /* MFUITestMgr.m in Sources */,
+				1C8D831A20BBB43B008AA52A /* BSUIRecordListController.m in Sources */,
+				1C8D82D220BBA2C4008AA52A /* BSUITestLogic.m in Sources */,
+				1C8D830E20BBA4A5008AA52A /* BSUIVideoPlayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +543,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				318FF01D6473525EA18B1C37556F6E97 /* Pods-BSUITest_Example-dummy.m in Sources */,
+				1C8D82D320BBA2C4008AA52A /* BSUITestLogic.m in Sources */,
+				1C8D830F20BBA4A5008AA52A /* BSUIVideoPlayerView.m in Sources */,
+				1C8D830920BBA477008AA52A /* BSUIDiffImageController.m in Sources */,
+				1C8D82FD20BBA419008AA52A /* BSUIVideoPlayerController.m in Sources */,
+				1C8D831520BBB414008AA52A /* BSUIVideoListController.m in Sources */,
+				1C8D82DF20BBA304008AA52A /* BSUITestFileHelper.m in Sources */,
+				1C8D82D920BBA2E3008AA52A /* BSUITestManager.m in Sources */,
+				1C8D82EB20BBA3A8008AA52A /* BSUIRootController.m in Sources */,
+				1C8D830320BBA45A008AA52A /* BSUIVideoCompareController.m in Sources */,
+				1C8D82E520BBA344008AA52A /* BSUITestWindow.m in Sources */,
+				1C8D831B20BBB43B008AA52A /* BSUIRecordListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -660,6 +708,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BSUITest\"",
+					"\"$(SRCROOT)/../../BSUITest/Classes/Vendor\"",
+				);
 				INFOPLIST_FILE = "Target Support Files/Pods-BSUITest_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -781,6 +834,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/BSUITest\"",
+					"\"$(SRCROOT)/../../BSUITest/Classes/Vendor\"",
+				);
 				INFOPLIST_FILE = "Target Support Files/Pods-BSUITest_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;

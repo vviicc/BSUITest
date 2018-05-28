@@ -1,21 +1,21 @@
 //
-//  MFRecMainController.m
-//  pkgame iOS
+//  BSUIRootController.m
+//  Pods
 //
-//  Created by Vic on 2018/5/14.
+//  Created by Vic on 2018/5/28.
 //
 
-#import "MFRecMainController.h"
-#import "MFUITestMgr.h"
-#import "MFRecHistoryController.h"
+#import "BSUIRootController.h"
+#import "BSUITestLogic.h"
+#import "BSUIRecordListController.h"
 
-@interface MFRecMainController ()
+@interface BSUIRootController ()
 
 @property (nonatomic, strong) UILabel *recordLabel;
 
 @end
 
-@implementation MFRecMainController
+@implementation BSUIRootController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -48,18 +48,18 @@
     if (self.recordLabel.tag == 11) {
         self.recordLabel.tag = 22;
         self.recordLabel.text = @"结束录制\n录制中...";
-        [[MFUITestMgr sharedInstance] startRecord];
+        [[BSUITestLogic sharedInstance] startRecord];
     } else if (self.recordLabel.tag == 22) {
         self.recordLabel.tag = 11;
         self.recordLabel.text = @"轻点录制\n长按更多";
-        [[MFUITestMgr sharedInstance] stopRecord];
+        [[BSUITestLogic sharedInstance] stopRecord];
         [self saveRecord];
     }
 }
 
 - (void)saveRecord
 {
-    if ([MFUITestMgr sharedInstance].logTouchs.count == 0) {
+    if ([BSUITestLogic sharedInstance].logTouchs.count == 0) {
         return;
     }
     
@@ -76,7 +76,7 @@
             recName = @"测试用例";
         }
         
-        [[MFUITestMgr sharedInstance] saveRecord:recName];
+        [[BSUITestLogic sharedInstance] saveRecord:recName];
         [weakSelf replayRecord];
     }];
     
@@ -102,7 +102,7 @@
             recCount = @"1";
         }
         
-        [[MFUITestMgr sharedInstance] replayLastRecord:recCount.intValue complete:^{
+        [[BSUITestLogic sharedInstance] replayLastRecord:recCount.intValue complete:^{
         }];
     }];
     
@@ -114,7 +114,7 @@
 
 - (void)onPressRecord
 {
-    [self presentViewController:[MFRecHistoryController new] animated:YES completion:nil];
+    [self presentViewController:[BSUIRecordListController new] animated:YES completion:nil];
 }
 
 - (BOOL)shouldReceiveTouch:(CGPoint)point
@@ -190,5 +190,6 @@
     
     return _recordLabel;
 }
+
 
 @end

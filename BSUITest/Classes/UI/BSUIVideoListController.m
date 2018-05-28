@@ -1,18 +1,19 @@
 //
-//  MFRecVideoListController.m
-//  pkgame iOS
+//  BSUIVideoListController.m
+//  Pods
 //
-//  Created by Vic on 2018/5/21.
+//  Created by Vic on 2018/5/28.
 //
 
-#import "MFRecVideoListController.h"
-#import "MFUITestMgr.h"
-#import "MFPlayVideoController.h"
-#import "MFVideoCompareController.h"
+#import "BSUIVideoListController.h"
+#import "BSUIVideoPlayerController.h"
+#import "BSUIVideoCompareController.h"
+#import "BSUITestLogic.h"
+#import "BSUITestFileHelper.h"
 
-static NSString * const kMFRecVideoListCellIdentifier = @"kMFRecVideoListCellIdentifier";
+static NSString * const kBSVideoListCellIdentifier = @"kBSVideoListCellIdentifier";
 
-@interface MFRecVideoListCell : UITableViewCell
+@interface BSVideoListCell : UITableViewCell
 
 - (void)updateCell:(NSString *)videoDate cellIndex:(int32_t)cellIndex isRecVideo:(BOOL)isRecVideo;
 
@@ -21,7 +22,7 @@ static NSString * const kMFRecVideoListCellIdentifier = @"kMFRecVideoListCellIde
 
 @end
 
-@interface MFRecVideoListCell()
+@interface BSVideoListCell()
 @property (nonatomic, strong) UILabel *dateLabel;
 @property (nonatomic, strong) UIButton *playVideoBtn;
 @property (nonatomic, strong) UIButton *compareBtn;
@@ -29,7 +30,7 @@ static NSString * const kMFRecVideoListCellIdentifier = @"kMFRecVideoListCellIde
 @property (nonatomic, assign) BOOL isRecVideo;
 @end
 
-@implementation MFRecVideoListCell
+@implementation BSVideoListCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -95,7 +96,7 @@ static NSString * const kMFRecVideoListCellIdentifier = @"kMFRecVideoListCellIde
 
 @end
 
-@interface MFRecVideoListController ()<UITableViewDelegate, UITableViewDataSource>
+@interface BSUIVideoListController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) NSString *recVideo;
 @property (nonatomic, strong) NSMutableArray<NSString *> *replayVideos;
@@ -107,12 +108,12 @@ static NSString * const kMFRecVideoListCellIdentifier = @"kMFRecVideoListCellIde
 
 @end
 
-@implementation MFRecVideoListController
+@implementation BSUIVideoListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[MFUITestMgr sharedInstance] historyRecVideo:self.recTimestamp videosCallback:^(NSString *recVideoName, NSArray<NSString *> *replayVideos) {
+    [BSUITestFileHelper historyRecVideo:self.recTimestamp videosCallback:^(NSString *recVideoName, NSArray<NSString *> *replayVideos) {
         self.recVideo = recVideoName;
         self.replayVideos = [NSMutableArray arrayWithArray:([replayVideos reverseObjectEnumerator].allObjects)];
     }];
@@ -137,7 +138,7 @@ static NSString * const kMFRecVideoListCellIdentifier = @"kMFRecVideoListCellIde
     tableView.dataSource = self;
     tableView.delegate = self;
     tableView.backgroundColor = [UIColor whiteColor];
-    [tableView registerClass:[MFRecVideoListCell class] forCellReuseIdentifier:kMFRecVideoListCellIdentifier];
+    [tableView registerClass:[BSVideoListCell class] forCellReuseIdentifier:kBSVideoListCellIdentifier];
     self.tableView = tableView;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:tableView];
@@ -198,7 +199,7 @@ static NSString * const kMFRecVideoListCellIdentifier = @"kMFRecVideoListCellIde
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MFRecVideoListCell *cell = [tableView dequeueReusableCellWithIdentifier:kMFRecVideoListCellIdentifier forIndexPath:indexPath];
+    BSVideoListCell *cell = [tableView dequeueReusableCellWithIdentifier:kBSVideoListCellIdentifier forIndexPath:indexPath];
     
     NSString *videoDate = nil;
     if (indexPath.section == 0) {
@@ -209,7 +210,7 @@ static NSString * const kMFRecVideoListCellIdentifier = @"kMFRecVideoListCellIde
     
     [cell updateCell:videoDate cellIndex:(int32_t)indexPath.row isRecVideo:(indexPath.section == 0)];
     
-    __weak MFRecVideoListController *weakSelf = self;
+    __weak __typeof(self)weakSelf = self;
     
     cell.didClickPlayVideo = ^(int32_t cellIndex, BOOL isRecVideo) {
         [weakSelf playVideo:cellIndex isRecVideo:isRecVideo];
@@ -237,7 +238,7 @@ static NSString * const kMFRecVideoListCellIdentifier = @"kMFRecVideoListCellIde
         
         NSString *videoName = self.replayVideos[indexPath.row];
         [self.replayVideos removeObjectAtIndex:indexPath.row];
-        [[MFUITestMgr sharedInstance] removeReplayVideo:videoName];
+        [BSUITestFileHelper removeReplayVideo:videoName];
         
         if (self.replayVideos.count == 0) {
             [tableView deleteSections:[NSIndexSet indexSetWithIndex:indexPath.section] withRowAnimation:UITableViewRowAnimationFade];
@@ -276,11 +277,11 @@ static NSString * const kMFRecVideoListCellIdentifier = @"kMFRecVideoListCellIde
         videoName = self.replayVideos[cellIndex];
     }
     
-    NSString *touchDir = [[MFUITestMgr sharedInstance] logTouchDir];
+    NSString *touchDir = [BSUITestFileHelper logTouchDir];
     NSString *videoFilePath = [touchDir stringByAppendingPathComponent:videoName];
     NSURL *videoFileURL = [NSURL fileURLWithPath:videoFilePath isDirectory:NO];
     
-    MFPlayVideoController *playVideoController = [[MFPlayVideoController alloc] init];
+    BSUIVideoPlayerController *playVideoController = [[BSUIVideoPlayerController alloc] init];
     playVideoController.videoURL = videoFileURL;
     
     [self presentViewController:playVideoController animated:YES completion:nil];
@@ -292,8 +293,8 @@ static NSString * const kMFRecVideoListCellIdentifier = @"kMFRecVideoListCellIde
         return;
     }
     
-    MFVideoCompareController *videoCompare = [[MFVideoCompareController alloc] init];
-    NSString *touchDir = [[MFUITestMgr sharedInstance] logTouchDir];
+    BSUIVideoCompareController *videoCompare = [[BSUIVideoCompareController alloc] init];
+    NSString *touchDir = [BSUITestFileHelper logTouchDir];
     NSString *recFilePath = [touchDir stringByAppendingPathComponent:self.recVideo];
     NSString *replayFilePath = [touchDir stringByAppendingPathComponent:self.replayVideos[cellIndex]];
     

@@ -1,17 +1,18 @@
 //
-//  MFRecHistoryController.m
-//  pkgame iOS
+//  BSUIRecordListController.m
+//  Pods
 //
-//  Created by Vic on 2018/5/14.
+//  Created by Vic on 2018/5/28.
 //
 
-#import "MFRecHistoryController.h"
-#import "MFRecVideoListController.h"
-#import "MFUITestMgr.h"
+#import "BSUIRecordListController.h"
+#import "BSUIVideoListController.h"
+#import "BSUITestLogic.h"
+#import "BSUITestFileHelper.h"
 
-static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdentifier";
+static NSString * const kBSRecordListCellIdentifier  = @"kBSRecordListCellIdentifier";
 
-@interface MFRecHistoryListCell : UITableViewCell
+@interface BSRecordListCell : UITableViewCell
 
 - (void)updateCell:(NSString *)name date:(NSString *)date cellIndex:(int32_t)cellIndex;
 
@@ -20,7 +21,7 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
 
 @end
 
-@interface MFRecHistoryListCell()
+@interface BSRecordListCell()
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UILabel *dateLabel;
 @property (nonatomic, strong) UIButton *playbackBtn;
@@ -28,7 +29,7 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
 @property (nonatomic, assign) int32_t cellIndex;
 @end
 
-@implementation MFRecHistoryListCell
+@implementation BSRecordListCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -100,7 +101,8 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
 
 @end
 
-@interface MFRecHistoryController ()<UITableViewDelegate, UITableViewDataSource>
+@interface BSUIRecordListController ()<UITableViewDelegate, UITableViewDataSource>
+
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIButton *closeBtn;
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -108,14 +110,15 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
 @property (nonatomic, strong) UISwitch *screenRecSwitch;
 @property (nonatomic, strong) UILabel *emptyLabel;
 @property (nonatomic, strong) NSMutableArray<NSString *> *recFileNames;
+
 @end
 
-@implementation MFRecHistoryController
+@implementation BSUIRecordListController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.recFileNames = [NSMutableArray arrayWithArray:[[MFUITestMgr sharedInstance] historyLogTouchPath]];
+    self.recFileNames = [NSMutableArray arrayWithArray:[BSUITestFileHelper historyLogTouchPath]];
     [self initViews];
 }
 
@@ -138,7 +141,7 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
     tableView.dataSource = self;
     tableView.delegate = self;
     tableView.backgroundColor = [UIColor whiteColor];
-    [tableView registerClass:[MFRecHistoryListCell class] forCellReuseIdentifier:kMFRecHistoryCellIdentifier];
+    [tableView registerClass:[BSRecordListCell class] forCellReuseIdentifier:kBSRecordListCellIdentifier];
     self.tableView = tableView;
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self.view addSubview:tableView];
@@ -150,7 +153,7 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
     self.emptyLabel.textColor = [UIColor lightGrayColor];
     [self.tableView addSubview:self.emptyLabel];
     self.emptyLabel.hidden = self.recFileNames.count != 0;
-
+    
     UIButton *btn = [[UIButton alloc] initWithFrame:CGRectZero];
     [btn setTitle:@"←" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -176,7 +179,7 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
     UISwitch *screenRecSwitch = [[UISwitch alloc] initWithFrame:CGRectZero];
     screenRecSwitch.tintColor = [UIColor redColor];
     screenRecSwitch.onTintColor = [UIColor redColor];
-    [screenRecSwitch setOn:[MFUITestMgr sharedInstance].screenRecEnable animated:NO];
+    [screenRecSwitch setOn:[BSUITestLogic sharedInstance].screenRecEnable animated:NO];
     [screenRecSwitch addTarget:self action:@selector(onSwitchChanged:) forControlEvents:UIControlEventValueChanged];
     self.screenRecSwitch = screenRecSwitch;
     [self.view addSubview:screenRecSwitch];
@@ -187,7 +190,7 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
 - (void)onSwitchChanged:(UISwitch *)aSwitch
 {
     BOOL isEnable = aSwitch.isOn;
-    [MFUITestMgr sharedInstance].screenRecEnable = isEnable;
+    [BSUITestLogic sharedInstance].screenRecEnable = isEnable;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -202,18 +205,18 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MFRecHistoryListCell *cell = [tableView dequeueReusableCellWithIdentifier:kMFRecHistoryCellIdentifier forIndexPath:indexPath];
+    BSRecordListCell *cell = [tableView dequeueReusableCellWithIdentifier:kBSRecordListCellIdentifier forIndexPath:indexPath];
     
     if (indexPath.row >= self.recFileNames.count) {
         return cell;
     }
     
     NSString *filePath = self.recFileNames[indexPath.row];
-    [[MFUITestMgr sharedInstance] parseFileName:filePath recordInfoBlock:^(NSString *name, NSString *date, NSString *duration) {
+    [BSUITestFileHelper parseFileName:filePath recordInfoBlock:^(NSString *name, NSString *date, NSString *duration) {
         [cell updateCell:name date:[NSString stringWithFormat:@"%@ / %@", date, [NSString stringWithFormat:@"%@秒",@(duration.intValue)]] cellIndex:(int32_t)indexPath.row];
     }];
     
-    __weak MFRecHistoryController *weakSelf = self;
+    __weak __typeof(self)weakSelf = self;
     
     cell.didClickReplay = ^(int32_t cellIndex) {
         if (cellIndex < weakSelf.recFileNames.count) {
@@ -227,7 +230,7 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
         NSString *recName = array[0];
         NSString *recTimestamp = array[1];
         
-        MFRecVideoListController *videoListController = [[MFRecVideoListController alloc] init];
+        BSUIVideoListController *videoListController = [[BSUIVideoListController alloc] init];
         videoListController.recName = recName;
         videoListController.recTimestamp = recTimestamp;
         
@@ -258,7 +261,7 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
         
         NSString *recName = self.recFileNames[indexPath.row];
         [self.recFileNames removeObjectAtIndex:indexPath.row];
-        [[MFUITestMgr sharedInstance] removeRecord:recName];
+        [BSUITestFileHelper removeRecord:recName];
         self.emptyLabel.hidden = self.recFileNames.count != 0;
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
     }
@@ -282,7 +285,7 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
 
 - (void)replayRecord:(NSString *)filePath
 {
-    __weak MFRecHistoryController *weakSelf = self;
+    __weak __typeof(self)weakSelf = self;
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"回放" message:@"输入回放循环次数\n回放前请确保场景和开始录制时一致" preferredStyle:UIAlertControllerStyleAlert];
     [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
         textField.placeholder = @"eg:2";
@@ -299,7 +302,7 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
         }
         
         [weakSelf dismissViewControllerAnimated:YES completion:^{
-            [[MFUITestMgr sharedInstance] replayHistoryRecord:filePath repeatCount:recCount.intValue complete:^{
+            [[BSUITestLogic sharedInstance] replayHistoryRecord:filePath repeatCount:recCount.intValue complete:^{
             }];
         }];
     }];
@@ -314,5 +317,6 @@ static NSString * const kMFRecHistoryCellIdentifier  = @"kMFRecHistoryCellIdenti
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 @end

@@ -1,36 +1,36 @@
 //
-//  MFVideoCompareController.m
-//  pkgame iOS
+//  BSUIVideoCompareController.m
+//  Pods
 //
-//  Created by Vic on 2018/5/23.
+//  Created by Vic on 2018/5/28.
 //
 
-#import "MFVideoCompareController.h"
-#import "MFVideoPlayerView.h"
+#import "BSUIVideoCompareController.h"
+#import "BSUIDiffImageController.h"
+#import "BSUIVideoPlayerView.h"
 #import "UIImage+PHA.h"
-#import "MFDiffImageController.h"
 
 @import AVFoundation;
 
-static NSString * const kMFVideoCompareCellIdentifier = @"kMFVideoCompareCellIdentifier";
-static NSInteger const kMFImageDiffValue = 5;
-static CGFloat const kMFVideoSamplingTime = 0.2;    // 视频采样截图时间间隔
+static NSString * const kBSVideoCompareCellIdentifier = @"kBSVideoCompareCellIdentifier";
+static NSInteger const kBSImageDiffValue = 5;       // 图片差异阈值，越小精度越高
+static CGFloat const kBSVideoSamplingTime = 0.2;    // 视频采样截图时间间隔
 
-@interface MFDiffImageObject : NSObject
+@interface BSDiffImageObject : NSObject
 @property (nonatomic, strong) UIImage *recImage;
 @property (nonatomic, strong) UIImage *replayImage;
 @property (nonatomic, assign) NSInteger diffValue;
 @property (nonatomic, assign) CGFloat time;
 @end
 
-@implementation MFDiffImageObject
+@implementation BSDiffImageObject
 
 @end
 
-@interface MFVideoCompareController ()<UITableViewDelegate, UITableViewDataSource>
+@interface BSUIVideoCompareController ()<UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic, strong) MFVideoPlayerView *recVideoPlayer;
-@property (nonatomic, strong) MFVideoPlayerView *replayVideoPlayer;
+@property (nonatomic, strong) BSUIVideoPlayerView *recVideoPlayer;
+@property (nonatomic, strong) BSUIVideoPlayerView *replayVideoPlayer;
 @property (nonatomic, strong) UILabel *recLabel;
 @property (nonatomic, strong) UILabel *replayLabel;
 @property (nonatomic, strong) UIButton *playAgainBtn;
@@ -39,12 +39,12 @@ static CGFloat const kMFVideoSamplingTime = 0.2;    // 视频采样截图时间�
 @property (nonatomic, strong) UILabel *allSameTipLabel;
 @property (nonatomic, strong) UIButton *closeBtn;
 
-@property (nonatomic, strong) NSMutableArray<MFDiffImageObject *> *diffImageArray;
+@property (nonatomic, strong) NSMutableArray<BSDiffImageObject *> *diffImageArray;
 @property (nonatomic, strong) dispatch_queue_t serialQueue;
 
 @end
 
-@implementation MFVideoCompareController
+@implementation BSUIVideoCompareController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -53,12 +53,10 @@ static CGFloat const kMFVideoSamplingTime = 0.2;    // 视频采样截图时间�
     [self initNotifys];
     
     self.diffImageArray = [NSMutableArray array];
-    self.serialQueue = dispatch_queue_create("com.mf.uitest.videoCmp", DISPATCH_QUEUE_SERIAL);
+    self.serialQueue = dispatch_queue_create("com.bs.uitest.videoCmp", DISPATCH_QUEUE_SERIAL);
     
-    __weak MFVideoCompareController *weakSelf = self;
+    __weak __typeof(self)weakSelf = self;
     [self compareRecVideo:self.recURL replayVideo:self.replayURL complete:^{
-        NSLog(@"99999 diff complete");
-        
         dispatch_async(dispatch_get_main_queue(), ^{
             [weakSelf.indicatorView stopAnimating];
             weakSelf.allSameTipLabel.hidden = weakSelf.diffImageArray.count != 0;
@@ -75,6 +73,7 @@ static CGFloat const kMFVideoSamplingTime = 0.2;    // 视频采样截图时间�
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
+    
     self.closeBtn.frame = CGRectMake(0, 0, 50, 44);
     self.recLabel.frame = CGRectMake(0, 24, CGRectGetWidth(self.view.bounds) / 2.0, 20);
     self.replayLabel.frame = CGRectMake(CGRectGetMaxX(self.recLabel.frame), CGRectGetMinY(self.recLabel.frame), CGRectGetWidth(self.recLabel.bounds), CGRectGetHeight(self.recLabel.bounds));
@@ -89,12 +88,12 @@ static CGFloat const kMFVideoSamplingTime = 0.2;    // 视频采样截图时间�
 - (void)initNotifys
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(videoPlayEnd:)
+                                             selector:@selector(onVideoPlayEnded:)
                                                  name:AVPlayerItemDidPlayToEndTimeNotification
                                                object:nil];
 }
 
-- (void)videoPlayEnd:(id)sender
+- (void)onVideoPlayEnded:(id)sender
 {
     static int totalPlayEndCount = 0;
     totalPlayEndCount += 1;
@@ -115,10 +114,10 @@ static CGFloat const kMFVideoSamplingTime = 0.2;    // 视频采样截图时间�
 {
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.recVideoPlayer = [[MFVideoPlayerView alloc] initWithFrame:CGRectZero videoURL:self.recURL canDrag:YES];
+    self.recVideoPlayer = [[BSUIVideoPlayerView alloc] initWithFrame:CGRectZero videoURL:self.recURL];
     [self.view addSubview:self.recVideoPlayer];
     
-    self.replayVideoPlayer = [[MFVideoPlayerView alloc] initWithFrame:CGRectZero videoURL:self.replayURL canDrag:YES];
+    self.replayVideoPlayer = [[BSUIVideoPlayerView alloc] initWithFrame:CGRectZero videoURL:self.replayURL];
     [self.view addSubview:self.replayVideoPlayer];
     
     self.recLabel = [self titleLabel:@"录制视频"];
@@ -169,6 +168,84 @@ static CGFloat const kMFVideoSamplingTime = 0.2;    // 视频采样截图时间�
     return label;
 }
 
+- (void)onClickClose
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - video compare
+
+- (void)compareRecVideo:(NSURL *)recURL replayVideo:(NSURL *)replayURL complete:(dispatch_block_t)complete
+{
+    int32_t recSecs = [self videoDuration:recURL];
+    int32_t replaySecs = [self videoDuration:replayURL];
+    int32_t secs = MIN(recSecs, replaySecs);
+    
+    CGFloat i = 0.0;
+    
+    while (i <= secs) {
+        
+        __weak __typeof(self) weakSelf = self;
+        dispatch_async(self.serialQueue, ^{
+            __strong __typeof(self) strongSelf = weakSelf;
+            @autoreleasepool {
+                if (strongSelf) {
+                    UIImage *recImage = [self videoImage:recURL time:i];
+                    UIImage *replayImage = [self videoImage:replayURL time:i];
+                    
+                    NSString *pHashString1 = [recImage pHashStringValueWithSize:CGSizeMake(8, 8)];
+                    NSString *pHashString2 = [replayImage pHashStringValueWithSize:CGSizeMake(8, 8)];
+                    NSInteger diff = [UIImage differentValueCountWithString:pHashString1 andString:pHashString2];
+                    
+                    
+                    if (diff > kBSImageDiffValue) {
+                        BSDiffImageObject *diffImageObj = [BSDiffImageObject new];
+                        diffImageObj.recImage = [self compressImage:recImage];
+                        diffImageObj.replayImage = [self compressImage:replayImage];
+                        diffImageObj.diffValue = diff;
+                        diffImageObj.time = i;
+                        
+                        [strongSelf.diffImageArray addObject:diffImageObj];
+                    }
+                    
+                    if ((i + kBSVideoSamplingTime > secs) && complete) {
+                        complete();
+                    }
+                }
+            }
+        });
+        
+        i += kBSVideoSamplingTime;
+    }
+}
+
+- (UIImage *)compressImage:(UIImage *)oriImage
+{
+    NSData *data = UIImageJPEGRepresentation(oriImage, 0.7);
+    UIImage *image = [UIImage imageWithData:data];
+    return image;
+}
+
+- (UIImage *)videoImage:(NSURL *)videoURL time:(CGFloat)time
+{
+    AVURLAsset* asset = [AVURLAsset URLAssetWithURL:videoURL options:nil];
+    AVAssetImageGenerator* generator = [AVAssetImageGenerator assetImageGeneratorWithAsset:asset];
+    generator.appliesPreferredTrackTransform = YES;
+    CGImageRef cgImage = [generator copyCGImageAtTime:CMTimeMakeWithSeconds(time, 1) actualTime:nil error:nil];
+    UIImage* image = [UIImage imageWithCGImage:cgImage];
+    CGImageRelease(cgImage);
+    return image;
+}
+
+- (int32_t)videoDuration:(NSURL *)videoURL
+{
+    AVAsset *asset = [AVAsset assetWithURL:videoURL];
+    int32_t secs = (int32_t)(asset.duration.value / asset.duration.timescale);
+    return secs;
+}
+
+#pragma mark - UITableViewDelegate, UITableViewDataSource
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.diffImageArray.count;
@@ -176,13 +253,13 @@ static CGFloat const kMFVideoSamplingTime = 0.2;    // 视频采样截图时间�
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kMFVideoCompareCellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kBSVideoCompareCellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kMFVideoCompareCellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:kBSVideoCompareCellIdentifier];
     }
     
     if (indexPath.row < self.diffImageArray.count) {
-        MFDiffImageObject *diffImageObj = self.diffImageArray[indexPath.row];
+        BSDiffImageObject *diffImageObj = self.diffImageArray[indexPath.row];
         UIImage *recImage = diffImageObj.recImage;
         CGFloat time = diffImageObj.time;
         NSInteger diffValue = diffImageObj.diffValue;
@@ -210,88 +287,16 @@ static CGFloat const kMFVideoSamplingTime = 0.2;    // 视频采样截图时间�
         return;
     }
     
-    MFDiffImageObject *diffImageObj = self.diffImageArray[indexPath.row];
+    BSDiffImageObject *diffImageObj = self.diffImageArray[indexPath.row];
     UIImage *recImage = diffImageObj.recImage;
     UIImage *replayImage = diffImageObj.replayImage;
     
-    MFDiffImageController *diffImageCtrl = [[MFDiffImageController alloc] init];
+    BSUIDiffImageController *diffImageCtrl = [[BSUIDiffImageController alloc] init];
     diffImageCtrl.recImage = recImage;
     diffImageCtrl.replayImage = replayImage;
     
     [self presentViewController:diffImageCtrl animated:YES completion:nil];
 }
 
-- (void)onClickClose
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)compareRecVideo:(NSURL *)recURL replayVideo:(NSURL *)replayURL complete:(dispatch_block_t)complete
-{
-    int32_t recSecs = [self videoDuration:recURL];
-    int32_t replaySecs = [self videoDuration:replayURL];
-    int32_t secs = MIN(recSecs, replaySecs);
-    
-    CGFloat i = 0.0;
-    
-    while (i <= secs) {
-        
-        dispatch_async(self.serialQueue, ^{
-            @autoreleasepool {
-                UIImage *recImage = [self videoImage:recURL time:i];
-                UIImage *replayImage = [self videoImage:replayURL time:i];
-                
-                NSString *pHashString1 = [recImage pHashStringValueWithSize:CGSizeMake(8, 8)];
-                NSString *pHashString2 = [replayImage pHashStringValueWithSize:CGSizeMake(8, 8)];
-                NSInteger diff = [UIImage differentValueCountWithString:pHashString1 andString:pHashString2];
-                
-                NSLog(@"99999 diff = %@, i = %@, secs = %@", @(diff), @(i), @(secs));
-                
-                if (diff > kMFImageDiffValue) {
-                    MFDiffImageObject *diffImageObj = [MFDiffImageObject new];
-                    diffImageObj.recImage = [self compressImage:recImage];
-                    diffImageObj.replayImage = [self compressImage:replayImage];
-                    diffImageObj.diffValue = diff;
-                    diffImageObj.time = i;
-                    
-                    [self.diffImageArray addObject:diffImageObj];
-                }
-                
-                if ((i + kMFVideoSamplingTime > secs) && complete) {
-                    complete();
-                }
-            }
-        });
-        
-        i += kMFVideoSamplingTime;
-    }
-}
-
-- (UIImage *)compressImage:(UIImage *)oriImage
-{
-    NSData *data = UIImageJPEGRepresentation(oriImage, 0.7);
-    UIImage *image = [UIImage imageWithData:data];
-    return image;
-}
-
-- (UIImage *)videoImage:(NSURL *)videoURL time:(CGFloat)time
-{
-    AVURLAsset* asset = [AVURLAsset URLAssetWithURL:videoURL options:nil];
-    AVAssetImageGenerator* generator = [AVAssetImageGenerator assetImageGeneratorWithAsset:asset];
-    generator.appliesPreferredTrackTransform = YES;
-    CGImageRef cgImage = [generator copyCGImageAtTime:CMTimeMakeWithSeconds(time, 1) actualTime:nil error:nil];
-    UIImage* image = [UIImage imageWithCGImage:cgImage];
-    CGImageRelease(cgImage);
-    return image;
-}
-
-- (int32_t)videoDuration:(NSURL *)videoURL
-{
-    AVAsset *asset = [AVAsset assetWithURL:videoURL];
-    int32_t secs = (int32_t)(asset.duration.value / asset.duration.timescale);
-    NSLog(@"99999 video duration value = %@, timescale = %@, secs = %@", @(asset.duration.value), @(asset.duration.timescale), @(secs));
-    
-    return secs;
-}
 
 @end

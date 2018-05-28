@@ -1,23 +1,28 @@
 //
-//  MFUITestMgr.h
-//  pkgame iOS
+//  BSUITestLogic.h
+//  Pods
 //
-//  Created by Vic on 2018/5/12.
+//  Created by Vic on 2018/5/28.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface MFUITestMgr : NSObject
+@import UIKit;
+@import CoreGraphics;
+
+@interface BSUITestLogic : NSObject
 
 + (instancetype)sharedInstance;
 
-@property (nonatomic, copy) dispatch_block_t goHomeUIBlock;
+@property (nonatomic, weak) UIWindow *recWindow;
 
 @property (nonatomic, assign) BOOL isRecording;
 
 @property (nonatomic, assign) BOOL screenRecEnable;
 
 @property (nonatomic, strong, readonly) NSMutableArray *logTouchs;
+
+- (void)hookSendEvent;
 
 - (void)startRecord;
 
@@ -30,17 +35,5 @@
 - (void)record:(CGPoint)point isKeyboard:(BOOL)isKeyboard endTouch:(BOOL)endTouch;
 
 - (void)replayHistoryRecord:(NSString *)recordPath repeatCount:(int32_t)repeatCount complete:(dispatch_block_t)complete;
-
-- (NSString *)logTouchDir;
-
-- (NSArray<NSString *> *)historyLogTouchPath;
-
-- (void)historyRecVideo:(NSString *)recTimestamp videosCallback:(void(^)(NSString *recVideoName, NSArray<NSString *> *replayVideos))videosCallback;
-
-- (void)removeRecord:(NSString *)recName;
-
-- (void)removeReplayVideo:(NSString *)videoFile;
-
-- (void)parseFileName:(NSString *)fileName recordInfoBlock:(void (^)(NSString *name, NSString *date, NSString *duration))recordInfoBlock;
 
 @end

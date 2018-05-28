@@ -1,13 +1,13 @@
 //
-//  MFDiffImageController.m
-//  pkgame iOS
+//  BSUIDiffImageController.m
+//  Pods
 //
-//  Created by Vic on 2018/5/23.
+//  Created by Vic on 2018/5/28.
 //
 
-#import "MFDiffImageController.h"
+#import "BSUIDiffImageController.h"
 
-@interface MFDiffImageController ()<UIScrollViewDelegate>
+@interface BSUIDiffImageController ()<UIScrollViewDelegate>
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UIButton *closeBtn;
@@ -16,11 +16,11 @@
 
 @end
 
-@implementation MFDiffImageController
+@implementation BSUIDiffImageController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
+    
     [self initViews];
 }
 
