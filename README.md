@@ -3,6 +3,7 @@
 [![CI Status](https://img.shields.io/travis/vviicc/BSUITest.svg?style=flat)](https://travis-ci.org/vviicc/BSUITest)
 [![Version](https://img.shields.io/cocoapods/v/BSUITest.svg?style=flat)](https://cocoapods.org/pods/BSUITest)
 [![License](https://img.shields.io/cocoapods/l/BSUITest.svg?style=flat)](https://cocoapods.org/pods/BSUITest)
+[![Support](https://img.shields.io/badge/support-iOS%208%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
 [![Platform](https://img.shields.io/cocoapods/p/BSUITest.svg?style=flat)](https://cocoapods.org/pods/BSUITest)
 
 ## Example
