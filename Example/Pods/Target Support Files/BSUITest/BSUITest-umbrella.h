@@ -10,9 +10,10 @@
 #endif
 #endif
 
-#import "BSUITestFileHelper.h"
-#import "BSUITestLogic.h"
 #import "BSUITestManager.h"
+#import "BSUITestLogic.h"
+#import "BSUITestFileHelper.h"
+#import "TPPreciseTimer.h"
 #import "BSUIDiffImageController.h"
 #import "BSUIRecordListController.h"
 #import "BSUIRootController.h"
@@ -25,7 +26,6 @@
 #import "PTFakeMetaTouch.h"
 #import "SRScreenRecorder.h"
 #import "UIImage+PHA.h"
-#import "TPPreciseTimer.h"
 
 FOUNDATION_EXPORT double BSUITestVersionNumber;
 FOUNDATION_EXPORT const unsigned char BSUITestVersionString[];

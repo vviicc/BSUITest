@@ -7,52 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0169EEF4FCA6134AB12324FF199C1B65 /* BSUIVideoListController.h in Headers */ = {isa = PBXBuildFile; fileRef = C238D6A965686803D62E330D88F00287 /* BSUIVideoListController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07A566E6F14DCC280C8FFF5ADAEFFB7D /* BSUITestFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C451FBB84D464B3B446EBF607E689A29 /* BSUITestFileHelper.m */; };
-		09E88EB3AECCF1C2020A5D6FD168CCB6 /* BSUIDiffImageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B8AA460EE94486BB6FA5C497A542A26 /* BSUIDiffImageController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		142950BCF2516DAE15D3813271829A46 /* KTouchPointerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C4632F81AF78B3E0A3CC67CCB7EA0AE3 /* KTouchPointerWindow.m */; };
-		1C73DAB120BC0E6200E83115 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C73DAB020BC0E6200E83115 /* CoreGraphics.framework */; };
-		1C73DAB220BC0E6D00E83115 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C73DAB020BC0E6200E83115 /* CoreGraphics.framework */; };
-		1DC74D444DC6C0A1BDB4FA90092146BC /* BSUIVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99418E5A82E726AC97A1154D2C752F3D /* BSUIVideoPlayerView.m */; };
-		23D58CFC9CCA544D18BB77AD3657F65A /* BSUIVideoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98846AA26F990A91FFA07D457D37C08F /* BSUIVideoListController.m */; };
-		24378E14D5E3E8CC38DBD2DB95555CEC /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = 92688A38A01D582D3A897A1CAD8370EE /* Info.plist */; };
-		297AE8C5C5DB41427A31D32D0E5A5ACD /* BSUIRecordListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A680ABA8E7BB06F68F15BC88F21134 /* BSUIRecordListController.m */; };
-		2BEE1751F1DA81C4210AA2AA5C65E8FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E386C7FDEDBD198A4271E6EA4B12D5D9 /* Foundation.framework */; };
+		001CF2C7B598601E332977D04345B1EE /* BSUIVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29D7D649A586FC75E0CC95218467838 /* BSUIVideoPlayerController.m */; };
+		02A9F00C5196A49ADDDB731F50A29EC6 /* BSUITestFileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 441AC68784C37F75E0BF8D33F3129863 /* BSUITestFileHelper.m */; };
+		0B37FA96E87E3830B6C1D817198E3953 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CE2720A550BBFD20C2F9B39726798C /* CoreGraphics.framework */; };
+		0B60A8B9815778DFB1D7798A4111F3B3 /* BSUIVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 592C72273858DCFC4F4C323951E685AB /* BSUIVideoPlayerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C7F3798B52718029CB0CD49F77979ED /* BSUITestWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = E9AF3CEA4D96DE85D0488D1C0EB1108C /* BSUITestWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E981462B4875BF06E2076AAF20C53D2 /* BSUIVideoCompareController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8012D58E61E07C6DD4F2FEE78E96D0 /* BSUIVideoCompareController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F57B6B25F9974F76288C6A9C49CDBC8 /* BSUITestFileHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F47DDFD7B6C8F163B1084692EE39F28 /* BSUITestFileHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FC23A7BA48659910B651AC68501D6EA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 390D53CC62F2521313F1230959397BA8 /* IOKit.framework */; };
+		128F597518BC871B3BD0A8C36A4FA379 /* BSUIRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0EF14EB7349B33564F2E966D1BB366E /* BSUIRootController.m */; };
+		1A74E884E338699A2EC9B7678D2639F5 /* BSUITestLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = 84E4786EF9701CCCB11496D054BDB3D6 /* BSUITestLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A887FFB057A2E91ECE27D447BC457DF /* BSUIRootController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DD4D49C027BD68F6D16AE12540566DA /* BSUIRootController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27305E7B1FAA73BB6E12F6F38327D465 /* TPPreciseTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A9AF56AA47A9F5AD2CDF01776624000 /* TPPreciseTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28B810071A492644014AAB1CB41E6FE6 /* BSUIVideoListController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF2C16ECCA95AD8AD6559A9A08D845A /* BSUIVideoListController.m */; };
+		2BEE1751F1DA81C4210AA2AA5C65E8FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D32ECB88E69FFE0C5888E1E545C6013 /* Foundation.framework */; };
+		2DD1A3F5C6F68574E9BDC87495A90E46 /* BSUITestWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 7605560DD6792DA44E0E976D73E03881 /* BSUITestWindow.m */; };
 		318FF01D6473525EA18B1C37556F6E97 /* Pods-BSUITest_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F195931E2881EB9ED2CB3AA078622B63 /* Pods-BSUITest_Example-dummy.m */; };
-		347228F18BCB32F422D4B8F57709461F /* BSUITestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D3DCCED2E45CEE85FF46336E4AF988A /* BSUITestManager.m */; };
-		36558D0B5D7244E9D82C429B702CBB06 /* BSUITestWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C46E046B2ED6177BBBA4FF9D7E82F82E /* BSUITestWindow.m */; };
-		3A331F91AEB516DFB6A10A74DABFE00E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E386C7FDEDBD198A4271E6EA4B12D5D9 /* Foundation.framework */; };
-		3CB3DDE67D20B09ABD3BD880DA79293B /* BSUITestLogic.h in Headers */ = {isa = PBXBuildFile; fileRef = CE2BBAFE7A304A3BD5FA788240BEB14E /* BSUITestLogic.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3F2D67E6EAB0479D8CFA977635FC26D9 /* BSUIVideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7FB332E8EEC79083C0F39BB87D1941 /* BSUIVideoPlayerController.m */; };
-		48DFEE7CE1936BB544A1F53BE4BCF0B4 /* BSUITest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D45591F3CCB2446845E1D9AB178C183 /* BSUITest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		49DDD1BFBD5BC24A39EAEBF8EF64A24C /* SRScreenRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FFE4CD97DE6374231472D30357D412A /* SRScreenRecorder.m */; };
-		557AF34558A807263BB984A1F3758CE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E386C7FDEDBD198A4271E6EA4B12D5D9 /* Foundation.framework */; };
-		5623788E0198116956CE028FF80D289A /* KTouchPointerWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 388627583E88A598F57031BDADFA3790 /* KTouchPointerWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5847C4668D53D7668E92EC228F2A4607 /* BSUIRootController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92EF2E0A537B9A91F8B7D35753B75EF8 /* BSUIRootController.m */; };
-		5FA0535C6733AA9FFD9CFD2302F1F28F /* TPPreciseTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2908E513F64C599F21BE6C542CE0F6AA /* TPPreciseTimer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		5FD9EE9329B503F9309090484A7D4EDE /* UIImage+PHA.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B3EB0DEB727C843193701AACC9E3B9 /* UIImage+PHA.m */; };
-		67634729A35722864CB35121420D412A /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FE67B752E0225D52D7143E69C8508B9 /* IOKit.framework */; };
+		3353E3E21160191928C2E1C82FDAE722 /* BSUIRecordListController.h in Headers */ = {isa = PBXBuildFile; fileRef = 668DE6383CED420B10C3E22CAEC4617E /* BSUIRecordListController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3554CC00C6F6433B9B865E58FE399847 /* UIImage+PHA.m in Sources */ = {isa = PBXBuildFile; fileRef = 57268405F87A54AFC72336D3DC2BD0C3 /* UIImage+PHA.m */; };
+		441568DBD6B416E30A0A533B3A7C4603 /* UIImage+PHA.h in Headers */ = {isa = PBXBuildFile; fileRef = BC510E9FB2B8DE17B0BB59564BBA9824 /* UIImage+PHA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		544C57927FE4275B6A2D161CE381C63F /* KTouchPointerWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = B5A06111EB4DC87A29240CC52A459A5D /* KTouchPointerWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		557AF34558A807263BB984A1F3758CE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D32ECB88E69FFE0C5888E1E545C6013 /* Foundation.framework */; };
+		69EBA586D38A4AE8CE09394B22227C30 /* BSUITest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8CA01D34BA74A3F4005C336FC123687 /* BSUITest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71C53031FDCB78B100A38262E4CABC3B /* BSUIVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 134C5BE43C2E49348EBC26E941EF22B9 /* BSUIVideoPlayerView.m */; };
 		745F793B957B30C86953FCCE1C7C1BD9 /* Pods-BSUITest_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 20AED87F921F74F6A3629E0591D81949 /* Pods-BSUITest_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		786C210EE335A1219C6B65161760F688 /* SRScreenRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ADBC63704550BF288478C7BD56B750F /* SRScreenRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		84E5CF70F068133F7DF50C0054BB218E /* BSUITestLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBA7A3A39D1C70B7CE1AD0B45FD49D4 /* BSUITestLogic.m */; };
+		7C2F546D25F35464DE38A9F929E2279E /* BSUIRecordListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EEC03BB5E49FA1FA1C8B3689E095FB7 /* BSUIRecordListController.m */; };
+		7F3C38E1B8548E3BFD1B64CA4ED9222F /* SRScreenRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = BE94581AA840696EA20CAC8CF0E5CD06 /* SRScreenRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84DED2A670AFB259A3A4DE12B970B634 /* BSUITestLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D37C6D357C67C0EFC192417E29C4B9A /* BSUITestLogic.m */; };
+		8CE66E335B6CCEF15560648AA06AB355 /* KTouchPointerWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFD4418AA00989844F3F49707631C55 /* KTouchPointerWindow.m */; };
+		8D4DCE5B0B98878090291403BA10DC9A /* BSUIVideoCompareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75D56945BD507CE9021F76E7393188D1 /* BSUIVideoCompareController.m */; };
+		9449753EB345F589DDD302ED2B158941 /* BSUITestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A4586BBF6167E8AA8C809A544F42AE6 /* BSUITestManager.m */; };
 		95027461A3207FDE3D8D9BBA1BDEF365 /* Pods-BSUITest_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0B93F918D00E474E92357B7E6EE8D8 /* Pods-BSUITest_Tests-dummy.m */; };
-		9ABD48ED10BBC07FD3A8FFAA874A8621 /* BSUITestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 30855A75A0E347477326DC9074C3E438 /* BSUITestManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B0B3B1610A365E1A39FDE4B60A8065C /* BSUIDiffImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4AB7A866C4D0874E91ABF836FFD588 /* BSUIDiffImageController.m */; };
-		9B57379F7C3930197CF8C7443165A7A8 /* BSUIVideoPlayerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D159A8158E52CD83908C21CDB99839C /* BSUIVideoPlayerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BB08CF01B01A8E4FCFA1B1AE8FE13FD /* BSUIVideoCompareController.h in Headers */ = {isa = PBXBuildFile; fileRef = 34091BC7935054660C7CF554F05C497E /* BSUIVideoCompareController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A939AC0111E6B307A22A507244CE4D9F /* BSUITest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF84C8EDD4387113BAC42B97A563FCB /* BSUITest-dummy.m */; };
-		A9FE401B70433BA26B45B23885957013 /* BSUIRecordListController.h in Headers */ = {isa = PBXBuildFile; fileRef = F8A7A18E9B77FB731A9C780FE71F1F5C /* BSUIRecordListController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AFC41CE2EACE2E6824556E1CCAB9DBBC /* BSUIVideoCompareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CFD34F301B4A566864AF41910239BC7 /* BSUIVideoCompareController.m */; };
-		B9C431A94DADADC5C345937D51A2582C /* PTFakeMetaTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 75CDCF71D591A4E0C5840B6DC5483DC1 /* PTFakeMetaTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF49D2FC0B7F612113ED2B0329C22535 /* BSUIVideoPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 85DB73967D08ECFE3FA527F50C69367D /* BSUIVideoPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA68C622C8638EAB34A5DC453ACE2692 /* BSUITestFileHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECE516FFF5F7BC67F17C84DFD68AC81 /* BSUITestFileHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A462A21D809E4BA5DF94057093C4F6D0 /* BSUIVideoPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = EB1B22C487A42C1E1DD09BA5329F09C6 /* BSUIVideoPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB0D963033212880418496AABFD12FE5 /* PTFakeMetaTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = BDC63AA83249A2C3F129EDC0CB1EF687 /* PTFakeMetaTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B6E067119BF13625354429B8F112EC29 /* SRScreenRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C1E2B55992CD1979182EFA17B2B47A /* SRScreenRecorder.m */; };
+		BCBC3A22ECE8F1FCC379EEBE48012389 /* BSUIDiffImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FFE8CC4D7DF8D06DEC16CA985CC1A0 /* BSUIDiffImageController.m */; };
+		BCE6E2F4EF1EA1589E4F4191B6591D7D /* BSUITestManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 050ADDA0F36BEC9F2858B4F21D7A58CA /* BSUITestManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCBD4D8247002138390908BFAA818B0F /* Pods-BSUITest_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A1131832CF078A75A4AF6914967DA389 /* Pods-BSUITest_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CFA2185E7DF1F44BFB1121555444EF31 /* module.modulemap in Sources */ = {isa = PBXBuildFile; fileRef = 3081BF73F976C6C3943C5A42E7BCB598 /* module.modulemap */; };
-		DBFDFF5B19FB831DB3133ACBD68FDE2B /* BSUITestWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 122A023659A928777D7E76D24430DAEE /* BSUITestWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E09EB3E60E98AD6F18894ADFE638C527 /* UIImage+PHA.h in Headers */ = {isa = PBXBuildFile; fileRef = C22689AAE6213FF589AED7DCBEDD2DA2 /* UIImage+PHA.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1E4BCA4DC92325504B9C703582F4C8E /* BSUIRootController.h in Headers */ = {isa = PBXBuildFile; fileRef = 206A1C7F1429031A1D1E025DD34B6282 /* BSUIRootController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F25B5510C534437D9BA4BA561FF85DAD /* PTFakeTouch in Sources */ = {isa = PBXBuildFile; fileRef = A6893BFD8144234868FB1B5F4A11C2CF /* PTFakeTouch */; };
-		FD44732CE8292150031DFE12BFC32E49 /* TPPreciseTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D762D2DF996EF68AC6FF59215149E9 /* TPPreciseTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D61CDE1F778495FF45850A06D560E67C /* BSUITest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA61E4196D408F6BAD1B53B0CB2836C3 /* BSUITest-dummy.m */; };
+		F063E3DEC07A373450214D622994EE9A /* BSUIVideoListController.h in Headers */ = {isa = PBXBuildFile; fileRef = 379D64895B36B5719F8A28B02863E7FB /* BSUIVideoListController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F446609A3F186C4488CAE6B80509237B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D32ECB88E69FFE0C5888E1E545C6013 /* Foundation.framework */; };
+		FED78FC80056A618BC51FF35F22B06B9 /* BSUIDiffImageController.h in Headers */ = {isa = PBXBuildFile; fileRef = B13269DBDBC47C84FFAB837D651139D5 /* BSUIDiffImageController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FFF0F8DCE363C248B1528B93C03A0BE3 /* TPPreciseTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE89E7E9360EEDAB288A0BD0A3D00F9 /* TPPreciseTimer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,86 +56,93 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 98757730249A09216272E406B6A7CC43;
+			remoteGlobalIDString = 4CB12BAC473D3503A25CF3DCD6E517C3;
 			remoteInfo = BSUITest;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		053616FA8520D6A53683395AD8FD7A52 /* PTFakeTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PTFakeTouch.framework; path = BSUITest/Classes/Vendor/PTFakeTouch.framework; sourceTree = "<group>"; };
-		122A023659A928777D7E76D24430DAEE /* BSUITestWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSUITestWindow.h; sourceTree = "<group>"; };
+		050ADDA0F36BEC9F2858B4F21D7A58CA /* BSUITestManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUITestManager.h; path = BSUITest/Classes/BSUITestManager.h; sourceTree = "<group>"; };
+		0662BF886F837EE53327A96AB03DA0B9 /* BSUITest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BSUITest.modulemap; sourceTree = "<group>"; };
+		0DFD4418AA00989844F3F49707631C55 /* KTouchPointerWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KTouchPointerWindow.m; path = BSUITest/Classes/Vendor/KTouchPointerWindow.m; sourceTree = "<group>"; };
+		0EEC03BB5E49FA1FA1C8B3689E095FB7 /* BSUIRecordListController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUIRecordListController.m; path = BSUITest/Classes/UI/BSUIRecordListController.m; sourceTree = "<group>"; };
+		134C5BE43C2E49348EBC26E941EF22B9 /* BSUIVideoPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUIVideoPlayerView.m; path = BSUITest/Classes/UI/BSUIVideoPlayerView.m; sourceTree = "<group>"; };
 		15DEA1E228A27C007AD6D9E267D305E4 /* Pods-BSUITest_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BSUITest_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		1B8AA460EE94486BB6FA5C497A542A26 /* BSUIDiffImageController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSUIDiffImageController.h; sourceTree = "<group>"; };
-		1C73DAB020BC0E6200E83115 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.2.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		206A1C7F1429031A1D1E025DD34B6282 /* BSUIRootController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSUIRootController.h; sourceTree = "<group>"; };
+		1A7C110FA46E0B5C3C3CAD08BDB2C977 /* BSUITest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BSUITest-prefix.pch"; sourceTree = "<group>"; };
+		1D32ECB88E69FFE0C5888E1E545C6013 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1D37C6D357C67C0EFC192417E29C4B9A /* BSUITestLogic.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUITestLogic.m; path = BSUITest/Classes/BSUITestLogic.m; sourceTree = "<group>"; };
 		20AED87F921F74F6A3629E0591D81949 /* Pods-BSUITest_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BSUITest_Example-umbrella.h"; sourceTree = "<group>"; };
-		2908E513F64C599F21BE6C542CE0F6AA /* TPPreciseTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPPreciseTimer.m; path = BSUITest/Classes/Vendor/TPPreciseTimer.m; sourceTree = "<group>"; };
+		293E5AECC02B134E7B574C25119AB35E /* BSUITest.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BSUITest.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		29EDA1976AFA309543D24BD2FF27D70A /* Pods-BSUITest_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BSUITest_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		29FECEEEC504989C56D16CA19F17E3AE /* Pods-BSUITest_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BSUITest_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2CFD34F301B4A566864AF41910239BC7 /* BSUIVideoCompareController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSUIVideoCompareController.m; sourceTree = "<group>"; };
-		2D159A8158E52CD83908C21CDB99839C /* BSUIVideoPlayerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSUIVideoPlayerController.h; sourceTree = "<group>"; };
-		30213527E9B4DE5010A0A5E6B0C5020F /* BSUITest.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = BSUITest.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		3081BF73F976C6C3943C5A42E7BCB598 /* module.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = module.modulemap; sourceTree = "<group>"; };
-		30855A75A0E347477326DC9074C3E438 /* BSUITestManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUITestManager.h; path = BSUITest/Classes/BSUITestManager.h; sourceTree = "<group>"; };
-		34091BC7935054660C7CF554F05C497E /* BSUIVideoCompareController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSUIVideoCompareController.h; sourceTree = "<group>"; };
+		2C8012D58E61E07C6DD4F2FEE78E96D0 /* BSUIVideoCompareController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUIVideoCompareController.h; path = BSUITest/Classes/UI/BSUIVideoCompareController.h; sourceTree = "<group>"; };
+		2F47DDFD7B6C8F163B1084692EE39F28 /* BSUITestFileHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUITestFileHelper.h; path = BSUITest/Classes/BSUITestFileHelper.h; sourceTree = "<group>"; };
 		3572B895DB00EA96C8BC4365E32FFDD6 /* Pods-BSUITest_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BSUITest_Example.release.xcconfig"; sourceTree = "<group>"; };
-		388627583E88A598F57031BDADFA3790 /* KTouchPointerWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KTouchPointerWindow.h; sourceTree = "<group>"; };
-		3ECE516FFF5F7BC67F17C84DFD68AC81 /* BSUITestFileHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUITestFileHelper.h; path = BSUITest/Classes/BSUITestFileHelper.h; sourceTree = "<group>"; };
-		49A680ABA8E7BB06F68F15BC88F21134 /* BSUIRecordListController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSUIRecordListController.m; sourceTree = "<group>"; };
-		4CBA7A3A39D1C70B7CE1AD0B45FD49D4 /* BSUITestLogic.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUITestLogic.m; path = BSUITest/Classes/BSUITestLogic.m; sourceTree = "<group>"; };
-		4FE67B752E0225D52D7143E69C8508B9 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		379D64895B36B5719F8A28B02863E7FB /* BSUIVideoListController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUIVideoListController.h; path = BSUITest/Classes/UI/BSUIVideoListController.h; sourceTree = "<group>"; };
+		390D53CC62F2521313F1230959397BA8 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		441AC68784C37F75E0BF8D33F3129863 /* BSUITestFileHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUITestFileHelper.m; path = BSUITest/Classes/BSUITestFileHelper.m; sourceTree = "<group>"; };
+		57268405F87A54AFC72336D3DC2BD0C3 /* UIImage+PHA.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+PHA.m"; path = "BSUITest/Classes/Vendor/UIImage+PHA.m"; sourceTree = "<group>"; };
+		592C72273858DCFC4F4C323951E685AB /* BSUIVideoPlayerController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUIVideoPlayerController.h; path = BSUITest/Classes/UI/BSUIVideoPlayerController.h; sourceTree = "<group>"; };
 		5A6038AB927B93D866CAAF6862D76F14 /* Pods-BSUITest_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BSUITest_Example-frameworks.sh"; sourceTree = "<group>"; };
 		5C5820DD7C80ED8DE496DE9FDB55E27A /* Pods-BSUITest_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BSUITest_Example.modulemap"; sourceTree = "<group>"; };
-		5D45591F3CCB2446845E1D9AB178C183 /* BSUITest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BSUITest-umbrella.h"; sourceTree = "<group>"; };
-		5FFE4CD97DE6374231472D30357D412A /* SRScreenRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SRScreenRecorder.m; sourceTree = "<group>"; };
-		6B13B975ADB6D8A2CCDA66A7349DB3B6 /* BSUITest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BSUITest.xcconfig; sourceTree = "<group>"; };
+		61FFE8CC4D7DF8D06DEC16CA985CC1A0 /* BSUIDiffImageController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUIDiffImageController.m; path = BSUITest/Classes/UI/BSUIDiffImageController.m; sourceTree = "<group>"; };
+		668DE6383CED420B10C3E22CAEC4617E /* BSUIRecordListController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUIRecordListController.h; path = BSUITest/Classes/UI/BSUIRecordListController.h; sourceTree = "<group>"; };
 		6CF512DFFAFC796CE71CF3DE0862AB00 /* Pods-BSUITest_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BSUITest_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		75CDCF71D591A4E0C5840B6DC5483DC1 /* PTFakeMetaTouch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PTFakeMetaTouch.h; sourceTree = "<group>"; };
+		75D56945BD507CE9021F76E7393188D1 /* BSUIVideoCompareController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUIVideoCompareController.m; path = BSUITest/Classes/UI/BSUIVideoCompareController.m; sourceTree = "<group>"; };
+		7605560DD6792DA44E0E976D73E03881 /* BSUITestWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUITestWindow.m; path = BSUITest/Classes/UI/BSUITestWindow.m; sourceTree = "<group>"; };
+		7A9AF56AA47A9F5AD2CDF01776624000 /* TPPreciseTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPPreciseTimer.h; path = BSUITest/Classes/Vendor/TPPreciseTimer.h; sourceTree = "<group>"; };
 		7ABFDA714FB6F91D8E07F81034883B71 /* Pods-BSUITest_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BSUITest_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		85DB73967D08ECFE3FA527F50C69367D /* BSUIVideoPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSUIVideoPlayerView.h; sourceTree = "<group>"; };
+		84E4786EF9701CCCB11496D054BDB3D6 /* BSUITestLogic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUITestLogic.h; path = BSUITest/Classes/BSUITestLogic.h; sourceTree = "<group>"; };
+		86CE2720A550BBFD20C2F9B39726798C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		8A4586BBF6167E8AA8C809A544F42AE6 /* BSUITestManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUITestManager.m; path = BSUITest/Classes/BSUITestManager.m; sourceTree = "<group>"; };
 		8C0B93F918D00E474E92357B7E6EE8D8 /* Pods-BSUITest_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BSUITest_Tests-dummy.m"; sourceTree = "<group>"; };
-		8CF84C8EDD4387113BAC42B97A563FCB /* BSUITest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BSUITest-dummy.m"; sourceTree = "<group>"; };
-		8D3DCCED2E45CEE85FF46336E4AF988A /* BSUITestManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUITestManager.m; path = BSUITest/Classes/BSUITestManager.m; sourceTree = "<group>"; };
-		91B3EB0DEB727C843193701AACC9E3B9 /* UIImage+PHA.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PHA.m"; sourceTree = "<group>"; };
-		92688A38A01D582D3A897A1CAD8370EE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92EF2E0A537B9A91F8B7D35753B75EF8 /* BSUIRootController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSUIRootController.m; sourceTree = "<group>"; };
-		931090B8C69586DA38D1F49551D5F497 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9361890662238E33A4E712A1700869E8 /* Pods-BSUITest_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BSUITest_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		98846AA26F990A91FFA07D457D37C08F /* BSUIVideoListController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSUIVideoListController.m; sourceTree = "<group>"; };
-		99418E5A82E726AC97A1154D2C752F3D /* BSUIVideoPlayerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSUIVideoPlayerView.m; sourceTree = "<group>"; };
-		99FB79A660466E57D0F1E093DC217C07 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		9ADBC63704550BF288478C7BD56B750F /* SRScreenRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SRScreenRecorder.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A6E15393FF5E2131E0D47F249EFF36F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DD4D49C027BD68F6D16AE12540566DA /* BSUIRootController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUIRootController.h; path = BSUITest/Classes/UI/BSUIRootController.h; sourceTree = "<group>"; };
 		A1131832CF078A75A4AF6914967DA389 /* Pods-BSUITest_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BSUITest_Tests-umbrella.h"; sourceTree = "<group>"; };
-		A6893BFD8144234868FB1B5F4A11C2CF /* PTFakeTouch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = PTFakeTouch; sourceTree = "<group>"; };
+		A29D7D649A586FC75E0CC95218467838 /* BSUIVideoPlayerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUIVideoPlayerController.m; path = BSUITest/Classes/UI/BSUIVideoPlayerController.m; sourceTree = "<group>"; };
+		A663BBEEEC92CD1AEDB5B066DCDF53BC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A8CA01D34BA74A3F4005C336FC123687 /* BSUITest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BSUITest-umbrella.h"; sourceTree = "<group>"; };
+		AA61E4196D408F6BAD1B53B0CB2836C3 /* BSUITest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BSUITest-dummy.m"; sourceTree = "<group>"; };
 		ACE7F9042B0AAE75111AEB71D710A6A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF7047E852F15D3AEEFA1EF004F2C254 /* BSUITest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BSUITest.xcconfig; sourceTree = "<group>"; };
+		B13269DBDBC47C84FFAB837D651139D5 /* BSUIDiffImageController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUIDiffImageController.h; path = BSUITest/Classes/UI/BSUIDiffImageController.h; sourceTree = "<group>"; };
 		B3CEDE59C4F4C8F085F616ADE2521872 /* Pods-BSUITest_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BSUITest_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		B3F5B48C711E080AAE7573B2E8CC99C0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		BF4AB7A866C4D0874E91ABF836FFD588 /* BSUIDiffImageController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSUIDiffImageController.m; sourceTree = "<group>"; };
-		C06D478FE4113F0D3D99276E49EF4142 /* Pods_BSUITest_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BSUITest_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C22689AAE6213FF589AED7DCBEDD2DA2 /* UIImage+PHA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+PHA.h"; sourceTree = "<group>"; };
-		C238D6A965686803D62E330D88F00287 /* BSUIVideoListController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSUIVideoListController.h; sourceTree = "<group>"; };
-		C451FBB84D464B3B446EBF607E689A29 /* BSUITestFileHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUITestFileHelper.m; path = BSUITest/Classes/BSUITestFileHelper.m; sourceTree = "<group>"; };
-		C4632F81AF78B3E0A3CC67CCB7EA0AE3 /* KTouchPointerWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = KTouchPointerWindow.m; sourceTree = "<group>"; };
-		C46E046B2ED6177BBBA4FF9D7E82F82E /* BSUITestWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSUITestWindow.m; sourceTree = "<group>"; };
+		B5A06111EB4DC87A29240CC52A459A5D /* KTouchPointerWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KTouchPointerWindow.h; path = BSUITest/Classes/Vendor/KTouchPointerWindow.h; sourceTree = "<group>"; };
+		BC510E9FB2B8DE17B0BB59564BBA9824 /* UIImage+PHA.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+PHA.h"; path = "BSUITest/Classes/Vendor/UIImage+PHA.h"; sourceTree = "<group>"; };
+		BDC63AA83249A2C3F129EDC0CB1EF687 /* PTFakeMetaTouch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = PTFakeMetaTouch.h; sourceTree = "<group>"; };
+		BE94581AA840696EA20CAC8CF0E5CD06 /* SRScreenRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRScreenRecorder.h; path = BSUITest/Classes/Vendor/SRScreenRecorder.h; sourceTree = "<group>"; };
+		C06D478FE4113F0D3D99276E49EF4142 /* Pods_BSUITest_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BSUITest_Tests.framework; path = "Pods-BSUITest_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0E54AE5C186B45BB5DB72436D4795D9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C0EF14EB7349B33564F2E966D1BB366E /* BSUIRootController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUIRootController.m; path = BSUITest/Classes/UI/BSUIRootController.m; sourceTree = "<group>"; };
 		C7FD3332A5260C3073BF7A84B00CE3FC /* Pods-BSUITest_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BSUITest_Example-resources.sh"; sourceTree = "<group>"; };
 		CB93FF0AD5D6132FAAE63A0A694E0949 /* Pods-BSUITest_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BSUITest_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		CE2BBAFE7A304A3BD5FA788240BEB14E /* BSUITestLogic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUITestLogic.h; path = BSUITest/Classes/BSUITestLogic.h; sourceTree = "<group>"; };
-		CF7FB332E8EEC79083C0F39BB87D1941 /* BSUIVideoPlayerController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BSUIVideoPlayerController.m; sourceTree = "<group>"; };
-		E386C7FDEDBD198A4271E6EA4B12D5D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		E9C15FECCC8F6BB44D5DF30A3CC1661C /* BSUITest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BSUITest-prefix.pch"; sourceTree = "<group>"; };
-		EA2070BECF7B6F5FB298C5E34741AF52 /* BSUITest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BSUITest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8C1E2B55992CD1979182EFA17B2B47A /* SRScreenRecorder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRScreenRecorder.m; path = BSUITest/Classes/Vendor/SRScreenRecorder.m; sourceTree = "<group>"; };
+		DCE89E7E9360EEDAB288A0BD0A3D00F9 /* TPPreciseTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TPPreciseTimer.m; path = BSUITest/Classes/Vendor/TPPreciseTimer.m; sourceTree = "<group>"; };
+		E9AF3CEA4D96DE85D0488D1C0EB1108C /* BSUITestWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUITestWindow.h; path = BSUITest/Classes/UI/BSUITestWindow.h; sourceTree = "<group>"; };
+		EA2070BECF7B6F5FB298C5E34741AF52 /* BSUITest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BSUITest.framework; path = BSUITest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB1B22C487A42C1E1DD09BA5329F09C6 /* BSUIVideoPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSUIVideoPlayerView.h; path = BSUITest/Classes/UI/BSUIVideoPlayerView.h; sourceTree = "<group>"; };
 		EFB096F7F32E2AF73F7D82F6CBBC0B16 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F001C423249E5DB4039E32E483994577 /* Pods-BSUITest_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BSUITest_Tests.modulemap"; sourceTree = "<group>"; };
 		F195931E2881EB9ED2CB3AA078622B63 /* Pods-BSUITest_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BSUITest_Example-dummy.m"; sourceTree = "<group>"; };
-		F8A7A18E9B77FB731A9C780FE71F1F5C /* BSUIRecordListController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BSUIRecordListController.h; sourceTree = "<group>"; };
-		F902A5ECD89D03D9097B84BFAB7D3F3F /* Pods_BSUITest_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BSUITest_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9D762D2DF996EF68AC6FF59215149E9 /* TPPreciseTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TPPreciseTimer.h; path = BSUITest/Classes/Vendor/TPPreciseTimer.h; sourceTree = "<group>"; };
+		F789B6F4ED74DE78C936127F5C59B795 /* PTFakeTouch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PTFakeTouch.framework; path = BSUITest/Classes/Vendor/PTFakeTouch.framework; sourceTree = "<group>"; };
+		F902A5ECD89D03D9097B84BFAB7D3F3F /* Pods_BSUITest_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BSUITest_Example.framework; path = "Pods-BSUITest_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB588A5AF543DD1D2923E45A46BFC39 /* Pods-BSUITest_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BSUITest_Tests-resources.sh"; sourceTree = "<group>"; };
-		FBA29663138E282C59019E3E1DEA7684 /* BSUITest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BSUITest.modulemap; sourceTree = "<group>"; };
+		FBF2C16ECCA95AD8AD6559A9A08D845A /* BSUIVideoListController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSUIVideoListController.m; path = BSUITest/Classes/UI/BSUIVideoListController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0995B368F9252EB00A2D8BBBB76E671A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B37FA96E87E3830B6C1D817198E3953 /* CoreGraphics.framework in Frameworks */,
+				F446609A3F186C4488CAE6B80509237B /* Foundation.framework in Frameworks */,
+				0FC23A7BA48659910B651AC68501D6EA /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37E2B80FEA491562447166D828F8B89C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,21 +151,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BE370D2A58FC0BAB3DBDE0B1A4E248F6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1C73DAB120BC0E6200E83115 /* CoreGraphics.framework in Frameworks */,
-				3A331F91AEB516DFB6A10A74DABFE00E /* Foundation.framework in Frameworks */,
-				67634729A35722864CB35121420D412A /* IOKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F76DE8D57ABAA9B2BE379BFBA16A887D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C73DAB220BC0E6D00E83115 /* CoreGraphics.framework in Frameworks */,
 				2BEE1751F1DA81C4210AA2AA5C65E8FD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,50 +162,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0BE870C824C3FA21CC1DAE6D65162BBD /* Headers */ = {
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				75CDCF71D591A4E0C5840B6DC5483DC1 /* PTFakeMetaTouch.h */,
-			);
-			path = Headers;
-			sourceTree = "<group>";
-		};
-		2E5F5F1BB76AB0B2E5C746706AF5BD1C /* PTFakeTouch.framework */ = {
-			isa = PBXGroup;
-			children = (
-				92688A38A01D582D3A897A1CAD8370EE /* Info.plist */,
-				A6893BFD8144234868FB1B5F4A11C2CF /* PTFakeTouch */,
-				0BE870C824C3FA21CC1DAE6D65162BBD /* Headers */,
-				897158F573C634AE0332BB5370D8A9BE /* Modules */,
-			);
-			path = PTFakeTouch.framework;
-			sourceTree = "<group>";
-		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1C73DAB020BC0E6200E83115 /* CoreGraphics.framework */,
-				73A3C35305AC21A53250960181A8B6F1 /* iOS */,
+				F9266BC0C8DDCC5C11538E94B8CAD0FA /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		50447819DFA37BD47CD1A5271B705FAE /* Frameworks */ = {
+		1C5CF2F3FBD0C6A3831EE05086CA290D /* BSUITest */ = {
 			isa = PBXGroup;
 			children = (
-				053616FA8520D6A53683395AD8FD7A52 /* PTFakeTouch.framework */,
+				050ADDA0F36BEC9F2858B4F21D7A58CA /* BSUITestManager.h */,
+				8A4586BBF6167E8AA8C809A544F42AE6 /* BSUITestManager.m */,
+				AE249E48AB832435DAC814C380E6D10F /* Logic */,
+				EFA51B77CD7E3EA5DB5DCEBF3DAFE809 /* MRC */,
+				4B77170D22CAB7D20436CC982DE3DAB2 /* Pod */,
+				21C235CC441642A5DF38200B4950A40B /* Support Files */,
+				774BBE5FE1401C8F4FA74FAFBFA1B830 /* UI */,
+				6679FBABCF6968FDF2081685D0694860 /* Vendor */,
 			);
-			name = Frameworks;
+			name = BSUITest;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		589A800950FC6D2B8DA16B8A63CE1E4A /* Pod */ = {
+		21C235CC441642A5DF38200B4950A40B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				30213527E9B4DE5010A0A5E6B0C5020F /* BSUITest.podspec */,
-				B3F5B48C711E080AAE7573B2E8CC99C0 /* LICENSE */,
-				99FB79A660466E57D0F1E093DC217C07 /* README.md */,
+				0662BF886F837EE53327A96AB03DA0B9 /* BSUITest.modulemap */,
+				AF7047E852F15D3AEEFA1EF004F2C254 /* BSUITest.xcconfig */,
+				AA61E4196D408F6BAD1B53B0CB2836C3 /* BSUITest-dummy.m */,
+				1A7C110FA46E0B5C3C3CAD08BDB2C977 /* BSUITest-prefix.pch */,
+				A8CA01D34BA74A3F4005C336FC123687 /* BSUITest-umbrella.h */,
+				9A6E15393FF5E2131E0D47F249EFF36F /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BSUITest";
+			sourceTree = "<group>";
+		};
+		4B77170D22CAB7D20436CC982DE3DAB2 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				293E5AECC02B134E7B574C25119AB35E /* BSUITest.podspec */,
+				C0E54AE5C186B45BB5DB72436D4795D9 /* LICENSE */,
+				A663BBEEEC92CD1AEDB5B066DCDF53BC /* README.md */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		54DDA3DA14A536216A10C2AF13DD3A4B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C5CF2F3FBD0C6A3831EE05086CA290D /* BSUITest */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		609F20639CB8DC930849E097DF35D1E5 /* Targets Support Files */ = {
@@ -225,75 +227,52 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		73A3C35305AC21A53250960181A8B6F1 /* iOS */ = {
+		6679FBABCF6968FDF2081685D0694860 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				E386C7FDEDBD198A4271E6EA4B12D5D9 /* Foundation.framework */,
-				4FE67B752E0225D52D7143E69C8508B9 /* IOKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		77FC1E4D81715993598E93286F1C4340 /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				388627583E88A598F57031BDADFA3790 /* KTouchPointerWindow.h */,
-				C4632F81AF78B3E0A3CC67CCB7EA0AE3 /* KTouchPointerWindow.m */,
-				9ADBC63704550BF288478C7BD56B750F /* SRScreenRecorder.h */,
-				5FFE4CD97DE6374231472D30357D412A /* SRScreenRecorder.m */,
-				C22689AAE6213FF589AED7DCBEDD2DA2 /* UIImage+PHA.h */,
-				91B3EB0DEB727C843193701AACC9E3B9 /* UIImage+PHA.m */,
-				2E5F5F1BB76AB0B2E5C746706AF5BD1C /* PTFakeTouch.framework */,
+				B5A06111EB4DC87A29240CC52A459A5D /* KTouchPointerWindow.h */,
+				0DFD4418AA00989844F3F49707631C55 /* KTouchPointerWindow.m */,
+				BE94581AA840696EA20CAC8CF0E5CD06 /* SRScreenRecorder.h */,
+				D8C1E2B55992CD1979182EFA17B2B47A /* SRScreenRecorder.m */,
+				BC510E9FB2B8DE17B0BB59564BBA9824 /* UIImage+PHA.h */,
+				57268405F87A54AFC72336D3DC2BD0C3 /* UIImage+PHA.m */,
+				D50C6AA7847B4FCE303D1106594D7BA1 /* PTFakeTouch.framework */,
 			);
 			name = Vendor;
-			path = BSUITest/Classes/Vendor;
 			sourceTree = "<group>";
 		};
-		7A7F8B4BFC4884A412B44858D87998E6 /* Development Pods */ = {
+		774BBE5FE1401C8F4FA74FAFBFA1B830 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				9315998B6C65A6864D7743595F9A516A /* BSUITest */,
+				B13269DBDBC47C84FFAB837D651139D5 /* BSUIDiffImageController.h */,
+				61FFE8CC4D7DF8D06DEC16CA985CC1A0 /* BSUIDiffImageController.m */,
+				668DE6383CED420B10C3E22CAEC4617E /* BSUIRecordListController.h */,
+				0EEC03BB5E49FA1FA1C8B3689E095FB7 /* BSUIRecordListController.m */,
+				9DD4D49C027BD68F6D16AE12540566DA /* BSUIRootController.h */,
+				C0EF14EB7349B33564F2E966D1BB366E /* BSUIRootController.m */,
+				E9AF3CEA4D96DE85D0488D1C0EB1108C /* BSUITestWindow.h */,
+				7605560DD6792DA44E0E976D73E03881 /* BSUITestWindow.m */,
+				2C8012D58E61E07C6DD4F2FEE78E96D0 /* BSUIVideoCompareController.h */,
+				75D56945BD507CE9021F76E7393188D1 /* BSUIVideoCompareController.m */,
+				379D64895B36B5719F8A28B02863E7FB /* BSUIVideoListController.h */,
+				FBF2C16ECCA95AD8AD6559A9A08D845A /* BSUIVideoListController.m */,
+				592C72273858DCFC4F4C323951E685AB /* BSUIVideoPlayerController.h */,
+				A29D7D649A586FC75E0CC95218467838 /* BSUIVideoPlayerController.m */,
+				EB1B22C487A42C1E1DD09BA5329F09C6 /* BSUIVideoPlayerView.h */,
+				134C5BE43C2E49348EBC26E941EF22B9 /* BSUIVideoPlayerView.m */,
 			);
-			name = "Development Pods";
+			name = UI;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				7A7F8B4BFC4884A412B44858D87998E6 /* Development Pods */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				54DDA3DA14A536216A10C2AF13DD3A4B /* Development Pods */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
 				B5BE0ADB440835F31FD31E55F2B197C2 /* Products */,
 				609F20639CB8DC930849E097DF35D1E5 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		897158F573C634AE0332BB5370D8A9BE /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				3081BF73F976C6C3943C5A42E7BCB598 /* module.modulemap */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		9315998B6C65A6864D7743595F9A516A /* BSUITest */ = {
-			isa = PBXGroup;
-			children = (
-				30855A75A0E347477326DC9074C3E438 /* BSUITestManager.h */,
-				8D3DCCED2E45CEE85FF46336E4AF988A /* BSUITestManager.m */,
-				CE2BBAFE7A304A3BD5FA788240BEB14E /* BSUITestLogic.h */,
-				4CBA7A3A39D1C70B7CE1AD0B45FD49D4 /* BSUITestLogic.m */,
-				3ECE516FFF5F7BC67F17C84DFD68AC81 /* BSUITestFileHelper.h */,
-				C451FBB84D464B3B446EBF607E689A29 /* BSUITestFileHelper.m */,
-				A7CDC27932023B269D041DDEE6D0112F /* UI */,
-				77FC1E4D81715993598E93286F1C4340 /* Vendor */,
-				FCE781AD6188DCF81D759C4F700E2A71 /* mrc */,
-				589A800950FC6D2B8DA16B8A63CE1E4A /* Pod */,
-				50447819DFA37BD47CD1A5271B705FAE /* Frameworks */,
-				9AD008CCC71ADC99F175AA5F51E43D0C /* Support Files */,
-			);
-			name = BSUITest;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		95994677EDC8A35832D158FD7A82A324 /* Pods-BSUITest_Tests */ = {
@@ -314,42 +293,33 @@
 			path = "Target Support Files/Pods-BSUITest_Tests";
 			sourceTree = "<group>";
 		};
-		9AD008CCC71ADC99F175AA5F51E43D0C /* Support Files */ = {
+		A3C71CC021B4F3823843FACFB9638691 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				FBA29663138E282C59019E3E1DEA7684 /* BSUITest.modulemap */,
-				6B13B975ADB6D8A2CCDA66A7349DB3B6 /* BSUITest.xcconfig */,
-				8CF84C8EDD4387113BAC42B97A563FCB /* BSUITest-dummy.m */,
-				E9C15FECCC8F6BB44D5DF30A3CC1661C /* BSUITest-prefix.pch */,
-				5D45591F3CCB2446845E1D9AB178C183 /* BSUITest-umbrella.h */,
-				931090B8C69586DA38D1F49551D5F497 /* Info.plist */,
+				BDC63AA83249A2C3F129EDC0CB1EF687 /* PTFakeMetaTouch.h */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/BSUITest";
+			name = Headers;
+			path = Headers;
 			sourceTree = "<group>";
 		};
-		A7CDC27932023B269D041DDEE6D0112F /* UI */ = {
+		AE249E48AB832435DAC814C380E6D10F /* Logic */ = {
 			isa = PBXGroup;
 			children = (
-				122A023659A928777D7E76D24430DAEE /* BSUITestWindow.h */,
-				C46E046B2ED6177BBBA4FF9D7E82F82E /* BSUITestWindow.m */,
-				206A1C7F1429031A1D1E025DD34B6282 /* BSUIRootController.h */,
-				92EF2E0A537B9A91F8B7D35753B75EF8 /* BSUIRootController.m */,
-				F8A7A18E9B77FB731A9C780FE71F1F5C /* BSUIRecordListController.h */,
-				49A680ABA8E7BB06F68F15BC88F21134 /* BSUIRecordListController.m */,
-				C238D6A965686803D62E330D88F00287 /* BSUIVideoListController.h */,
-				98846AA26F990A91FFA07D457D37C08F /* BSUIVideoListController.m */,
-				2D159A8158E52CD83908C21CDB99839C /* BSUIVideoPlayerController.h */,
-				CF7FB332E8EEC79083C0F39BB87D1941 /* BSUIVideoPlayerController.m */,
-				34091BC7935054660C7CF554F05C497E /* BSUIVideoCompareController.h */,
-				2CFD34F301B4A566864AF41910239BC7 /* BSUIVideoCompareController.m */,
-				1B8AA460EE94486BB6FA5C497A542A26 /* BSUIDiffImageController.h */,
-				BF4AB7A866C4D0874E91ABF836FFD588 /* BSUIDiffImageController.m */,
-				85DB73967D08ECFE3FA527F50C69367D /* BSUIVideoPlayerView.h */,
-				99418E5A82E726AC97A1154D2C752F3D /* BSUIVideoPlayerView.m */,
+				2F47DDFD7B6C8F163B1084692EE39F28 /* BSUITestFileHelper.h */,
+				441AC68784C37F75E0BF8D33F3129863 /* BSUITestFileHelper.m */,
+				84E4786EF9701CCCB11496D054BDB3D6 /* BSUITestLogic.h */,
+				1D37C6D357C67C0EFC192417E29C4B9A /* BSUITestLogic.m */,
+				B5BDA0ECB7FF0B5618222C354EF66662 /* Frameworks */,
 			);
-			name = UI;
-			path = BSUITest/Classes/UI;
+			name = Logic;
+			sourceTree = "<group>";
+		};
+		B5BDA0ECB7FF0B5618222C354EF66662 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F789B6F4ED74DE78C936127F5C59B795 /* PTFakeTouch.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B5BE0ADB440835F31FD31E55F2B197C2 /* Products */ = {
@@ -360,6 +330,24 @@
 				C06D478FE4113F0D3D99276E49EF4142 /* Pods_BSUITest_Tests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D50C6AA7847B4FCE303D1106594D7BA1 /* PTFakeTouch.framework */ = {
+			isa = PBXGroup;
+			children = (
+				A3C71CC021B4F3823843FACFB9638691 /* Headers */,
+			);
+			name = PTFakeTouch.framework;
+			path = BSUITest/Classes/Vendor/PTFakeTouch.framework;
+			sourceTree = "<group>";
+		};
+		EFA51B77CD7E3EA5DB5DCEBF3DAFE809 /* MRC */ = {
+			isa = PBXGroup;
+			children = (
+				7A9AF56AA47A9F5AD2CDF01776624000 /* TPPreciseTimer.h */,
+				DCE89E7E9360EEDAB288A0BD0A3D00F9 /* TPPreciseTimer.m */,
+			);
+			name = MRC;
 			sourceTree = "<group>";
 		};
 		F25259F5150F4A165AF3BC4F3F4432E2 /* Pods-BSUITest_Example */ = {
@@ -380,13 +368,14 @@
 			path = "Target Support Files/Pods-BSUITest_Example";
 			sourceTree = "<group>";
 		};
-		FCE781AD6188DCF81D759C4F700E2A71 /* mrc */ = {
+		F9266BC0C8DDCC5C11538E94B8CAD0FA /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F9D762D2DF996EF68AC6FF59215149E9 /* TPPreciseTimer.h */,
-				2908E513F64C599F21BE6C542CE0F6AA /* TPPreciseTimer.m */,
+				86CE2720A550BBFD20C2F9B39726798C /* CoreGraphics.framework */,
+				1D32ECB88E69FFE0C5888E1E545C6013 /* Foundation.framework */,
+				390D53CC62F2521313F1230959397BA8 /* IOKit.framework */,
 			);
-			name = mrc;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,27 +389,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7B2F822A06FA034E618C72778DD1A9F9 /* Headers */ = {
+		C4C59FC0C328A3F689F697D23DB6886F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E88EB3AECCF1C2020A5D6FD168CCB6 /* BSUIDiffImageController.h in Headers */,
-				A9FE401B70433BA26B45B23885957013 /* BSUIRecordListController.h in Headers */,
-				F1E4BCA4DC92325504B9C703582F4C8E /* BSUIRootController.h in Headers */,
-				48DFEE7CE1936BB544A1F53BE4BCF0B4 /* BSUITest-umbrella.h in Headers */,
-				CA68C622C8638EAB34A5DC453ACE2692 /* BSUITestFileHelper.h in Headers */,
-				3CB3DDE67D20B09ABD3BD880DA79293B /* BSUITestLogic.h in Headers */,
-				9ABD48ED10BBC07FD3A8FFAA874A8621 /* BSUITestManager.h in Headers */,
-				DBFDFF5B19FB831DB3133ACBD68FDE2B /* BSUITestWindow.h in Headers */,
-				9BB08CF01B01A8E4FCFA1B1AE8FE13FD /* BSUIVideoCompareController.h in Headers */,
-				0169EEF4FCA6134AB12324FF199C1B65 /* BSUIVideoListController.h in Headers */,
-				9B57379F7C3930197CF8C7443165A7A8 /* BSUIVideoPlayerController.h in Headers */,
-				BF49D2FC0B7F612113ED2B0329C22535 /* BSUIVideoPlayerView.h in Headers */,
-				5623788E0198116956CE028FF80D289A /* KTouchPointerWindow.h in Headers */,
-				B9C431A94DADADC5C345937D51A2582C /* PTFakeMetaTouch.h in Headers */,
-				786C210EE335A1219C6B65161760F688 /* SRScreenRecorder.h in Headers */,
-				FD44732CE8292150031DFE12BFC32E49 /* TPPreciseTimer.h in Headers */,
-				E09EB3E60E98AD6F18894ADFE638C527 /* UIImage+PHA.h in Headers */,
+				FED78FC80056A618BC51FF35F22B06B9 /* BSUIDiffImageController.h in Headers */,
+				3353E3E21160191928C2E1C82FDAE722 /* BSUIRecordListController.h in Headers */,
+				1A887FFB057A2E91ECE27D447BC457DF /* BSUIRootController.h in Headers */,
+				69EBA586D38A4AE8CE09394B22227C30 /* BSUITest-umbrella.h in Headers */,
+				0F57B6B25F9974F76288C6A9C49CDBC8 /* BSUITestFileHelper.h in Headers */,
+				1A74E884E338699A2EC9B7678D2639F5 /* BSUITestLogic.h in Headers */,
+				BCE6E2F4EF1EA1589E4F4191B6591D7D /* BSUITestManager.h in Headers */,
+				0C7F3798B52718029CB0CD49F77979ED /* BSUITestWindow.h in Headers */,
+				0E981462B4875BF06E2076AAF20C53D2 /* BSUIVideoCompareController.h in Headers */,
+				F063E3DEC07A373450214D622994EE9A /* BSUIVideoListController.h in Headers */,
+				0B60A8B9815778DFB1D7798A4111F3B3 /* BSUIVideoPlayerController.h in Headers */,
+				A462A21D809E4BA5DF94057093C4F6D0 /* BSUIVideoPlayerView.h in Headers */,
+				544C57927FE4275B6A2D161CE381C63F /* KTouchPointerWindow.h in Headers */,
+				AB0D963033212880418496AABFD12FE5 /* PTFakeMetaTouch.h in Headers */,
+				7F3C38E1B8548E3BFD1B64CA4ED9222F /* SRScreenRecorder.h in Headers */,
+				27305E7B1FAA73BB6E12F6F38327D465 /* TPPreciseTimer.h in Headers */,
+				441568DBD6B416E30A0A533B3A7C4603 /* UIImage+PHA.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +442,23 @@
 			productReference = F902A5ECD89D03D9097B84BFAB7D3F3F /* Pods_BSUITest_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		4CB12BAC473D3503A25CF3DCD6E517C3 /* BSUITest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 715B3F9F8A9FD205E32771E89AAB8CD8 /* Build configuration list for PBXNativeTarget "BSUITest" */;
+			buildPhases = (
+				A89928781513CD5D14468F73DA858251 /* Sources */,
+				0995B368F9252EB00A2D8BBBB76E671A /* Frameworks */,
+				C4C59FC0C328A3F689F697D23DB6886F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BSUITest;
+			productName = BSUITest;
+			productReference = EA2070BECF7B6F5FB298C5E34741AF52 /* BSUITest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		78C80D4D848C6E70E8E2E371096757E8 /* Pods-BSUITest_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8605DCA44F9747A5F948F8F59717C004 /* Build configuration list for PBXNativeTarget "Pods-BSUITest_Tests" */;
@@ -468,23 +474,6 @@
 			name = "Pods-BSUITest_Tests";
 			productName = "Pods-BSUITest_Tests";
 			productReference = C06D478FE4113F0D3D99276E49EF4142 /* Pods_BSUITest_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		98757730249A09216272E406B6A7CC43 /* BSUITest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2D478C50D529914B97230CC12B89E92D /* Build configuration list for PBXNativeTarget "BSUITest" */;
-			buildPhases = (
-				8AA096C2D2F2DA13E50DAE73C9BA10C9 /* Sources */,
-				BE370D2A58FC0BAB3DBDE0B1A4E248F6 /* Frameworks */,
-				7B2F822A06FA034E618C72778DD1A9F9 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BSUITest;
-			productName = BSUITest;
-			productReference = EA2070BECF7B6F5FB298C5E34741AF52 /* BSUITest.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -508,7 +497,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				98757730249A09216272E406B6A7CC43 /* BSUITest */,
+				4CB12BAC473D3503A25CF3DCD6E517C3 /* BSUITest */,
 				302B271FBC99F230A0E20F0437478DED /* Pods-BSUITest_Example */,
 				78C80D4D848C6E70E8E2E371096757E8 /* Pods-BSUITest_Tests */,
 			);
@@ -524,29 +513,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8AA096C2D2F2DA13E50DAE73C9BA10C9 /* Sources */ = {
+		A89928781513CD5D14468F73DA858251 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B0B3B1610A365E1A39FDE4B60A8065C /* BSUIDiffImageController.m in Sources */,
-				297AE8C5C5DB41427A31D32D0E5A5ACD /* BSUIRecordListController.m in Sources */,
-				5847C4668D53D7668E92EC228F2A4607 /* BSUIRootController.m in Sources */,
-				A939AC0111E6B307A22A507244CE4D9F /* BSUITest-dummy.m in Sources */,
-				07A566E6F14DCC280C8FFF5ADAEFFB7D /* BSUITestFileHelper.m in Sources */,
-				84E5CF70F068133F7DF50C0054BB218E /* BSUITestLogic.m in Sources */,
-				347228F18BCB32F422D4B8F57709461F /* BSUITestManager.m in Sources */,
-				36558D0B5D7244E9D82C429B702CBB06 /* BSUITestWindow.m in Sources */,
-				AFC41CE2EACE2E6824556E1CCAB9DBBC /* BSUIVideoCompareController.m in Sources */,
-				23D58CFC9CCA544D18BB77AD3657F65A /* BSUIVideoListController.m in Sources */,
-				3F2D67E6EAB0479D8CFA977635FC26D9 /* BSUIVideoPlayerController.m in Sources */,
-				1DC74D444DC6C0A1BDB4FA90092146BC /* BSUIVideoPlayerView.m in Sources */,
-				24378E14D5E3E8CC38DBD2DB95555CEC /* Info.plist in Sources */,
-				142950BCF2516DAE15D3813271829A46 /* KTouchPointerWindow.m in Sources */,
-				CFA2185E7DF1F44BFB1121555444EF31 /* module.modulemap in Sources */,
-				F25B5510C534437D9BA4BA561FF85DAD /* PTFakeTouch in Sources */,
-				49DDD1BFBD5BC24A39EAEBF8EF64A24C /* SRScreenRecorder.m in Sources */,
-				5FA0535C6733AA9FFD9CFD2302F1F28F /* TPPreciseTimer.m in Sources */,
-				5FD9EE9329B503F9309090484A7D4EDE /* UIImage+PHA.m in Sources */,
+				BCBC3A22ECE8F1FCC379EEBE48012389 /* BSUIDiffImageController.m in Sources */,
+				7C2F546D25F35464DE38A9F929E2279E /* BSUIRecordListController.m in Sources */,
+				128F597518BC871B3BD0A8C36A4FA379 /* BSUIRootController.m in Sources */,
+				D61CDE1F778495FF45850A06D560E67C /* BSUITest-dummy.m in Sources */,
+				02A9F00C5196A49ADDDB731F50A29EC6 /* BSUITestFileHelper.m in Sources */,
+				84DED2A670AFB259A3A4DE12B970B634 /* BSUITestLogic.m in Sources */,
+				9449753EB345F589DDD302ED2B158941 /* BSUITestManager.m in Sources */,
+				2DD1A3F5C6F68574E9BDC87495A90E46 /* BSUITestWindow.m in Sources */,
+				8D4DCE5B0B98878090291403BA10DC9A /* BSUIVideoCompareController.m in Sources */,
+				28B810071A492644014AAB1CB41E6FE6 /* BSUIVideoListController.m in Sources */,
+				001CF2C7B598601E332977D04345B1EE /* BSUIVideoPlayerController.m in Sources */,
+				71C53031FDCB78B100A38262E4CABC3B /* BSUIVideoPlayerView.m in Sources */,
+				8CE66E335B6CCEF15560648AA06AB355 /* KTouchPointerWindow.m in Sources */,
+				B6E067119BF13625354429B8F112EC29 /* SRScreenRecorder.m in Sources */,
+				FFF0F8DCE363C248B1528B93C03A0BE3 /* TPPreciseTimer.m in Sources */,
+				3554CC00C6F6433B9B865E58FE399847 /* UIImage+PHA.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,12 +550,42 @@
 		5AE007F2A7666A42B3B5718B2FB583FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BSUITest;
-			target = 98757730249A09216272E406B6A7CC43 /* BSUITest */;
+			target = 4CB12BAC473D3503A25CF3DCD6E517C3 /* BSUITest */;
 			targetProxy = 18034BB08858A30FC1F6BC35616D106F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1FEB517D1D10CD76D579210C2EC83B46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF7047E852F15D3AEEFA1EF004F2C254 /* BSUITest.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BSUITest/BSUITest-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BSUITest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BSUITest/BSUITest.modulemap";
+				PRODUCT_NAME = BSUITest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		38FADD0B5AB1D6DB9CFB569CE50876B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 29FECEEEC504989C56D16CA19F17E3AE /* Pods-BSUITest_Tests.debug.xcconfig */;
@@ -602,9 +618,9 @@
 			};
 			name = Debug;
 		};
-		569B05621A69ACCC10DA3F47658FD452 /* Debug */ = {
+		3B696F20E623D06E381CBC8FC6DCD833 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B13B975ADB6D8A2CCDA66A7349DB3B6 /* BSUITest.xcconfig */;
+			baseConfigurationReference = AF7047E852F15D3AEEFA1EF004F2C254 /* BSUITest.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -657,36 +673,6 @@
 				PRODUCT_NAME = Pods_BSUITest_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		699EBF59F285ACBA725196C9F6DA7160 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B13B975ADB6D8A2CCDA66A7349DB3B6 /* BSUITest.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BSUITest/BSUITest-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BSUITest/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BSUITest/BSUITest.modulemap";
-				PRODUCT_NAME = BSUITest;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -883,20 +869,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D478C50D529914B97230CC12B89E92D /* Build configuration list for PBXNativeTarget "BSUITest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				569B05621A69ACCC10DA3F47658FD452 /* Debug */,
-				699EBF59F285ACBA725196C9F6DA7160 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3E37FB098AE76440E29106ADBF00CEB /* Debug */,
 				DA03565BE765DB55C6448FB363A44481 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		715B3F9F8A9FD205E32771E89AAB8CD8 /* Build configuration list for PBXNativeTarget "BSUITest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B696F20E623D06E381CBC8FC6DCD833 /* Debug */,
+				1FEB517D1D10CD76D579210C2EC83B46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
