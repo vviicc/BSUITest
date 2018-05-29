@@ -1,30 +1,44 @@
 # BSUITest
 
-[![CI Status](https://img.shields.io/travis/vviicc/BSUITest.svg?style=flat)](https://travis-ci.org/vviicc/BSUITest)
-[![Version](https://img.shields.io/cocoapods/v/BSUITest.svg?style=flat)](https://cocoapods.org/pods/BSUITest)
-[![License](https://img.shields.io/cocoapods/l/BSUITest.svg?style=flat)](https://cocoapods.org/pods/BSUITest)
-[![Support](https://img.shields.io/badge/support-iOS%208%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
+[![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)]
 [![Platform](https://img.shields.io/cocoapods/p/BSUITest.svg?style=flat)](https://cocoapods.org/pods/BSUITest)
 
-## Example
+## 介绍
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+为什么要开发这个工具？苹果官方有提供 `UI Testing` UI自动化测试框架，但是存在如下几个问题：1.要连着真机跑，无法脱机运行 2.需要自己写测试脚本代码 3.没有提供回放与录制比较。`BSUITest`通过记录点击事件和点击时机实现不用写UI测试脚本便可实现测试用例录制回放功能，在录制和回放期间录屏并输出两者的截图相似度可作为测试结果参考。
 
-## Requirements
+## Demo
+`git clone`这个仓库，运行example下工程即可，请先`pod install`
 
-## Installation
+截图
 
-BSUITest is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
 
+## 安装
+
+推荐使用 [CocoaPods](https://cocoapods.org)
 ```ruby
 pod 'BSUITest'
 ```
 
-## Author
+如果是只在Debug环境使用
+```ruby
+pod 'BSUITest', :configurations => ['Debug']
+```
 
-vviicc, 704550191@qq.com
+要求：iOS8+
 
-## License
+## 注意
 
-BSUITest is available under the MIT license. See the LICENSE file for more info.
+**因为使用到了私有API，提交上架前务必移除！**可以注释掉pod`# pod 'BSUITest'`
+
+## 使用
+使用很简单，只需一行代码
+```Objective C
+[[BSUITestManager sharedManager] setEnable:YES];
+```
+## 交流
+遇到任何问题，欢迎提交 PR 或者 issue，欢迎大神们多指点。
+
+## 许可证
+
+使用 MIT 许可证，见 LICENSE 文件。
