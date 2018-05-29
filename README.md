@@ -19,6 +19,10 @@
 
 `git clone` 本仓库，运行Example目录工程，注意：运行前先执行 `pod install`
 
+截图
+
+<img src="https://raw.githubusercontent.com/vviicc/BSUITest/master/Screenshot/s1.PNG" width="320"> <img src="https://raw.githubusercontent.com/vviicc/BSUITest/master/Screenshot/s2.PNG" width="320">
+
 ## 安装
 
 推荐使用 [CocoaPods](https://cocoapods.org) 安装
