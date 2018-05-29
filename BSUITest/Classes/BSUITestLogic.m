@@ -341,7 +341,12 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        isEnable = [[NSUserDefaults standardUserDefaults] boolForKey:@"BSScreenRecEnable"];
+        if (![[NSUserDefaults standardUserDefaults] objectForKey:@"BSScreenRecEnable"]) {
+            // 默认开启
+            isEnable = YES;
+        } else {
+            isEnable = [[NSUserDefaults standardUserDefaults] boolForKey:@"BSScreenRecEnable"];
+        }
         objc_setAssociatedObject(self, @selector(screenRecEnable), @(isEnable), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     });
     

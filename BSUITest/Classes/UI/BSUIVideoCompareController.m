@@ -8,7 +8,7 @@
 #import "BSUIVideoCompareController.h"
 #import "BSUIDiffImageController.h"
 #import "BSUIVideoPlayerView.h"
-#import "UIImage+PHA.h"
+#import "UIImageDiff.h"
 
 @import AVFoundation;
 
@@ -195,10 +195,7 @@ static CGFloat const kBSVideoSamplingTime = 0.2;    // 视频采样截图时间�
                     UIImage *recImage = [strongSelf videoImage:recURL time:i];
                     UIImage *replayImage = [strongSelf videoImage:replayURL time:i];
                     
-                    NSString *pHashString1 = [recImage pHashStringValueWithSize:CGSizeMake(8, 8)];
-                    NSString *pHashString2 = [replayImage pHashStringValueWithSize:CGSizeMake(8, 8)];
-                    NSInteger diff = [UIImage differentValueCountWithString:pHashString1 andString:pHashString2];
-                    
+                    NSInteger diff = [UIImageDiff differentValueCountWithImage:recImage andAnotherImage:replayImage];
                     
                     if (diff > kBSImageDiffValue) {
                         BSDiffImageObject *diffImageObj = [BSDiffImageObject new];
