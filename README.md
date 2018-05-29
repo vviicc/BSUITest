@@ -21,7 +21,7 @@
 
 截图
 
-<img src="https://raw.githubusercontent.com/vviicc/BSUITest/master/Screenshot/s1.PNG" width="320"> <img src="https://raw.githubusercontent.com/vviicc/BSUITest/master/Screenshot/s2.PNG" width="320">
+<img src="https://raw.githubusercontent.com/vviicc/BSUITest/master/Screenshot/s1.PNG" width="375">     <img src="https://raw.githubusercontent.com/vviicc/BSUITest/master/Screenshot/s2.PNG" width="375">
 
 ## 安装
 
