@@ -1,30 +1,43 @@
 # BSUITest
 
-[![CI Status](https://img.shields.io/travis/vviicc/BSUITest.svg?style=flat)](https://travis-ci.org/vviicc/BSUITest)
-[![Version](https://img.shields.io/cocoapods/v/BSUITest.svg?style=flat)](https://cocoapods.org/pods/BSUITest)
-[![License](https://img.shields.io/cocoapods/l/BSUITest.svg?style=flat)](https://cocoapods.org/pods/BSUITest)
-[![Support](https://img.shields.io/badge/support-iOS%206%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/);
-[![Platform](https://img.shields.io/cocoapods/p/BSUITest.svg?style=flat)](https://cocoapods.org/pods/BSUITest)
+[![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)]
+[![Support](https://img.shields.io/badge/support-iOS%206%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
 
-## Example
+## 介绍
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+为什么要开发这个工具？系统提供了UI自动化测试框架 `UI Testing`，但存在几个缺陷。1.必须连着真机跑，无法脱机运行 2.要自己手写脚本代码 3.没有提供回放与录制结果对比。`BSUITest` 基于记录下每次的点击事件和时间点，无需编写测试脚本就可以直接在设备进行录制回放。并且提供了录制和回放期间录屏功能，根据录屏的截图进行回放和录制的对比，提供了方便的结果差异参考。
 
-## Requirements
+## Demo
 
-## Installation
+`git clone`本仓库，运行Example目录工程，注意：运行前先执行`pod install`
 
-BSUITest is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## 安装
 
+推荐使用 [CocoaPods](https://cocoapods.org) 安装
 ```ruby
 pod 'BSUITest'
 ```
 
-## Author
+如果只在Debug环境下使用
+```ruby
+pod 'BSUITest', :configurations => ['Debug']
+```
 
-vviicc, 704550191@qq.com
+要求：iOS 8+
 
-## License
+**注意：因为使用了私有API，请提交审核前务必移除，可以注释pod** `# pod 'BSUITest'`
 
-BSUITest is available under the MIT license. See the LICENSE file for more info.
+## 使用
+
+使用很简单，只需一行代码
+```Objc
+    [[BSUITestManager sharedManager] setEnable:YES];
+```
+
+## 交流
+有任何问题或想法，欢迎 PR 或 issue，请大神多多指点。
+
+
+## 许可证
+
+基于MIT许可证，请参看MIT文件。
