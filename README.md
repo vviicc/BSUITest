@@ -1,17 +1,17 @@
 # BSUITest
 
 ![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)
-![Support](https://img.shields.io/badge/support-iOS%208%2B%20-blue.svg?style=flat)](https://www.apple.com/nl/ios/)
+![Support](https://img.shields.io/badge/support-iOS%208%2B%20-blue.svg?style=flat)
 
 ## 介绍
 
 为什么要开发这个工具？系统提供了UI自动化测试框架 `UI Testing`，但存在几个缺陷。
 
-1.必须连着真机跑，无法脱机运行
+1. 必须连着真机跑，无法脱机运行
 
-2.要自己手写脚本代码
+2. 要自己手写脚本代码
 
-3.没有提供回放与录制结果对比。
+3. 没有提供回放与录制结果对比。
 
 `BSUITest` 基于记录下每次的点击事件和时间点，无需编写测试脚本就可以直接在设备进行录制回放。并且提供了录制和回放期间录屏功能，根据录屏的截图进行回放和录制的对比，提供了方便的结果差异参考。
 
