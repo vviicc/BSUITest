@@ -342,8 +342,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (![[NSUserDefaults standardUserDefaults] objectForKey:@"BSScreenRecEnable"]) {
-            // 默认开启
-            isEnable = YES;
+            // 默认关闭
+            isEnable = NO;
         } else {
             isEnable = [[NSUserDefaults standardUserDefaults] boolForKey:@"BSScreenRecEnable"];
         }

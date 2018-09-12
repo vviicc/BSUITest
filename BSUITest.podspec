@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BSUITest'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'A useful UI Automatic Testing Tool that supports UI Recording/UI Playback/Screen Record/Video Screenshot Comparison'
   
   s.description      = 'It is a useful UI Automatic Testing Tool that supports UI Recording/UI Playback/Screen Record/Video Screenshot Comparison without writing any ui test script.一个不用写UI测试脚本便可实现录制/回放/录屏/录屏截图相识度对比的UI自动化测试工具。'
